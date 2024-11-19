@@ -3,26 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Info de Países</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-    .country {
-      border: 1px solid #ddd;
-      margin: 10px;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-  </style>
+  <title>Cartas MTG</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Información de Países</h1>
-  <div id="countries"></div>
+  <header>
+    <h1>Magic: The Gathering</h1>
+    <input type="text" id="search" placeholder="Buscar cartas..." />
+    <button id="searchButton">Buscar</button>
+  </header>
+
+  <main id="cardContainer">
+    <!-- Las cartas se mostrarán aquí -->
+  </main>
 
   <script src="script.js"></script>
 </body>

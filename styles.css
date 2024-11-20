@@ -53,15 +53,6 @@ body {
 }
 
 /* Search Screen */
-.hidden {
-  display: none;
-}
-
-#searchScreen {
-  text-align: center;
-  padding: 20px;
-}
-
 #searchScreen header {
   background-color: #333;
   color: white;

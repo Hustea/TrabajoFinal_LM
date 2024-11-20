@@ -1,52 +1,39 @@
-// script-search.js
+// URL de la API
+const API_URL = 'https://restcountries.com/v3.1/all';
 
-// Seleccionamos los elementos necesarios
-const searchInput = document.getElementById('search');
-const searchButton = document.getElementById('searchButton');
-const cardContainer = document.getElementById('cardContainer');
+// Elemento donde se mostrarán los países
+const countriesContainer = document.getElementById('countries');
 
-// Función para buscar cartas
-async function fetchCards(query) {
+// Función para obtener datos de la API
+async function fetchCountries() {
   try {
-    const response = await fetch(`https://api.scryfall.com/cards/search?q=${query}`);
-    const data = await response.json();
+    // Hacemos una petición GET
+    const response = await fetch(API_URL);
 
-    if (data.object === "error") {
-      cardContainer.innerHTML = `<p>No se encontraron cartas.</p>`;
-      return;
-    }
+    // Convertimos la respuesta a JSON
+    const countries = await response.json();
 
-    displayCards(data.data);
+    // Mostramos los primeros 5 países como ejemplo
+    displayCountries(countries.slice(0, 5));
   } catch (error) {
-    console.error('Error al buscar cartas:', error);
-    cardContainer.innerHTML = `<p>Error al cargar los datos.</p>`;
+    console.error('Error al obtener los países:', error);
   }
 }
 
-// Función para mostrar las cartas
-function displayCards(cards) {
-  cardContainer.innerHTML = '';
-  cards.forEach(card => {
-    const cardElement = document.createElement('div');
-    cardElement.classList.add('card');
-
-    cardElement.innerHTML = `
-      <img src="${card.image_uris ? card.image_uris.normal : 'https://via.placeholder.com/200'}" alt="${card.name}">
-      <h2>${card.name}</h2>
-      <p><strong>Tipo:</strong> ${card.type_line}</p>
-      <p><strong>Precio:</strong> $${card.prices.usd || 'N/A'}</p>
+// Función para mostrar los países en la página
+function displayCountries(countries) {
+  countries.forEach(country => {
+    const countryElement = document.createElement('div');
+    countryElement.classList.add('country');
+    countryElement.innerHTML = `
+      <h2>${country.name.common}</h2>
+      <p><strong>Capital:</strong> ${country.capital ? country.capital[0] : 'N/A'}</p>
+      <p><strong>Región:</strong> ${country.region}</p>
+      <p><strong>Población:</strong> ${country.population.toLocaleString()}</p>
     `;
-
-    cardContainer.appendChild(cardElement);
+    countriesContainer.appendChild(countryElement);
   });
 }
 
-// Manejador del botón de búsqueda
-searchButton.addEventListener('click', () => {
-  const query = searchInput.value.trim();
-  if (query) {
-    fetchCards(query);
-  } else {
-    alert('Por favor, escribe algo para buscar.');
-  }
-});
+// Llamamos a la función
+fetchCountries();

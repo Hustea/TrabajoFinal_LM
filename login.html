@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="loginScreen">
+    <h1>Iniciar Sesión</h1>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Usuario" required>
+      <input type="password" id="password" placeholder="Contraseña" required>
+      <button type="submit">Iniciar Sesión</button>
+    </form>
+    <p id="errorMessage" class="error"></p>
+  </div>
+  <script>
+    // Manejo del formulario de Login
+    const loginForm = document.getElementById('loginForm');
+    const errorMessage = document.getElementById('errorMessage');
+
+    // Credenciales predefinidas
+    const USERNAME = 'admin';
+    const PASSWORD = '1234';
+
+    loginForm.addEventListener('submit', (event) => {
+      event.preventDefault(); // Evita que el formulario recargue la página
+
+      const enteredUsername = document.getElementById('username').value;
+      const enteredPassword = document.getElementById('password').value;
+
+      // Validar credenciales
+      if (enteredUsername === USERNAME && enteredPassword === PASSWORD) {
+        // Redirigir al buscador
+        window.location.href = 'search.html';
+      } else {
+        errorMessage.textContent = 'Usuario o contraseña incorrectos';
+      }
+    });
+  </script>
+</body>
+</html>

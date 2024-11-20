@@ -7,6 +7,11 @@ body {
   text-align: center;
 }
 
+/* Ajustes generales para móviles */
+* {
+  box-sizing: border-box;
+}
+
 /* Login Screen */
 #loginScreen {
   display: flex;
@@ -16,25 +21,26 @@ body {
   height: 100vh;
   background-color: #333;
   color: white;
+  padding: 20px;
 }
 
 #loginScreen form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: 80%;
-  max-width: 300px;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
 }
 
 #loginScreen input {
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
   border: none;
   border-radius: 5px;
 }
 
 #loginScreen button {
-  padding: 10px;
+  padding: 12px;
   background-color: #007bff;
   color: white;
   font-size: 16px;
@@ -50,61 +56,101 @@ body {
 .error {
   color: red;
   margin-top: 10px;
+  font-size: 14px;
 }
 
-/* Search Screen */
+/* Header para buscador */
 header {
   background-color: #333;
   color: white;
-  padding: 10px;
-}
-
-header input, header button {
-  padding: 10px;
-  margin: 5px;
-  font-size: 16px;
-  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 header input {
-  width: 70%;
+  width: calc(100% - 100px); /* Deja espacio para el botón */
+  padding: 10px;
+  font-size: 16px;
   border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 header button {
+  padding: 10px;
+  font-size: 16px;
   background-color: #007bff;
   color: white;
   border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 80px;
 }
 
 header button:hover {
   background-color: #0056b3;
 }
 
+/* Contenedor de cartas */
 #cardContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 20px;
+  margin: 10px;
+  gap: 10px;
 }
 
+/* Carta individual */
 .card {
   background: #fff;
   border: 1px solid #ddd;
-  margin: 10px;
   padding: 10px;
-  width: 200px;
+  width: 90%; /* Se adapta al ancho del dispositivo */
+  max-width: 300px; /* Limita el ancho en pantallas grandes */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  text-align: center;
 }
 
 .card img {
   width: 100%;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .card h2 {
   font-size: 18px;
-  margin: 10px 0 5px;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  header input {
+    font-size: 14px;
+  }
+
+  header button {
+    font-size: 14px;
+  }
+
+  #cardContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 95%; /* Ocupa casi todo el ancho */
+  }
 }

@@ -99,7 +99,7 @@ header button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 2px;      /* --------------10px--------------*/
+  margin: 10px;
   gap: 10px;
 }
 
@@ -151,6 +151,6 @@ header button:hover {
   }
 
   .card {
-    width: 95%; /* Ocupa casi todo el ancho */
+    width: 99%; /* Ocupa casi todo el ancho -------- 95-----------*/
   }
 }

@@ -151,6 +151,6 @@ header button:hover {
   }
 
   .card {
-    width: 99%; /* Ocupa casi todo el ancho -------- 95-----------*/
+    width: 95%; /* Ocupa casi todo el ancho */
   }
 }

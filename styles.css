@@ -77,59 +77,19 @@ body {
   margin-bottom: 20px;
 }
 
-/* Contenedor de los botones */
-.button-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-/* Estilo general de los botones del menú */
-.menu-button {
-  width: 90%; /* Ocupa casi todo el ancho de la pantalla */
-  max-width: 400px; /* Límite de tamaño para pantallas grandes */
-  aspect-ratio: 16 / 9; /* Mantiene proporción de 16:9 */
-  position: relative;
-  border-radius: 15px;
-  overflow: hidden;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-/* Efecto al pasar el mouse por encima */
-.menu-button:hover {
-  transform: scale(1.05);
-}
-
-/* Imagen del botón */
-.menu-button img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-/* Texto superpuesto en los botones */
-.menu-button p {
-  position: absolute;
-  z-index: 2;
-  color: white;
+#menuScreen button {
+  padding: 15px 20px;
   font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  width: 100%;
-  bottom: 10px; /* Espaciado del texto desde la parte inferior */
-  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
-  padding: 5px 0;
-  border-radius: 0 0 15px 15px; /* Redondeo solo para la parte inferior */
+  margin: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#menuScreen button:hover {
+  background-color: #0056b3;
 }
 
 

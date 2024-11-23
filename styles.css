@@ -77,6 +77,21 @@ body {
   margin-bottom: 20px;
 }
 
+#menuScreen button {
+  padding: 15px 20px;
+  font-size: 18px;
+  margin: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#menuScreen button:hover {
+  background-color: #0056b3;
+}
+
 /* Contenedor de los botones */
 .button-container {
   display: flex;
@@ -131,6 +146,7 @@ body {
   padding: 5px 0;
   border-radius: 0 0 15px 15px; /* Redondeo solo para la parte inferior */
 }
+
 
 
 /*-------------------------------- Header para buscador --------------------------------*/

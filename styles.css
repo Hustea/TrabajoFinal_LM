@@ -88,10 +88,6 @@ body {
   cursor: pointer;
 }
 
-#menuScreen button:hover {
-  background-color: #0056b3;
-}
-
 /* Contenedor de los botones */
 .button-container {
   display: flex;

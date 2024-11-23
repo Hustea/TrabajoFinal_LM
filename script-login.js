@@ -19,7 +19,7 @@ loginForm.addEventListener('submit', (event) => {
   // Verificar credenciales
   if (enteredUsername === USERNAME && enteredPassword === PASSWORD) {
     // Redirigir al buscador
-    window.location.href = 'search.html';
+    window.location.href = 'menu.html';
   } else {
     // Mostrar mensaje de error
     errorMessage.textContent = 'Usuario o contraseña incorrectos';

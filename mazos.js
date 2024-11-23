@@ -3,9 +3,10 @@ const githubBaseUrl = "https://raw.githubusercontent.com/USER/REPO/BRANCH/precon
 
 // Listado de nombres de archivos JSON (puedes completarlo con más nombres si lo deseas)
 const mazos = [
-  "Adaptive Enchantment (Commander 2018 Precon Decklist).json",
-  "Arcane Maelstrom (Commander 2020 Precon Decklist).json",
-  "Arm for Battle (Commander Legends Precon Decklist).json"
+  "https://raw.githubusercontent.com/Westly/CommanderPrecons/refs/heads/main/precon_json/Animated%20Army%20(Bloomburrow%20Commander%20Precon%20Decklist).json",
+  "https://raw.githubusercontent.com/Westly/CommanderPrecons/refs/heads/main/precon_json/Family%20Matters%20(Bloomburrow%20Commander%20Precon%20Decklist).json,
+  "https://raw.githubusercontent.com/Westly/CommanderPrecons/refs/heads/main/precon_json/Peace%20Offering%20(Bloomburrow%20Commander%20Precon%20Decklist).json",
+  "https://raw.githubusercontent.com/Westly/CommanderPrecons/refs/heads/main/precon_json/Squirreled%20Away%20(Bloomburrow%20Commander%20Precon%20Decklist).json"
   // Agrega más mazos aquí...
 ];
 

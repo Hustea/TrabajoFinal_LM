@@ -87,22 +87,17 @@ body {
   margin-top: 50px;
 }
 
-/* Botones básicos */
+/* Estilo general de los botones del menú */
 .menu-button {
-  width: 90%;
-  max-width: 400px;
-  aspect-ratio: 16 / 9;
-  background-color: orange; /* Color de prueba */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 90%; /* Ocupa casi todo el ancho de la pantalla */
+  max-width: 400px; /* Límite de tamaño para pantallas grandes */
+  aspect-ratio: 16 / 9; /* Mantiene proporción de 16:9 */
+  position: relative;
   border-radius: 15px;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
   cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
 /* Efecto al pasar el mouse por encima */

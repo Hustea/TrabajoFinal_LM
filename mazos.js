@@ -1,5 +1,6 @@
 // URL base del repositorio GitHub con los JSON de mazos
-const githubBaseUrl = "https://raw.githubusercontent.com/USER/REPO/BRANCH/precon_json/";
+const githubBaseUrl = "https://raw.github.com/Westly/CommanderPrecons/tree/main/precon_json/";
+
 
 // Listado de nombres de archivos JSON (puedes completarlo con más nombres si lo deseas)
 const mazos = [

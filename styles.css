@@ -189,3 +189,119 @@ header button:hover {
     width: 95%; /* Ocupa casi todo el ancho */
   }
 }
+
+/* ===== Estilos para la página de buscador de mazos ===== */
+
+/* Contenedor general del buscador */
+.container {
+  max-width: 500px;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Título del buscador */
+.container h1 {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+/* Lista donde aparecerán los mazos */
+.mazos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+/* Cada mazo individual */
+.mazo-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.mazo-item h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+/* Botón para ver el contenido del mazo */
+.view-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: orange;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.view-button:hover {
+  background-color: darkorange;
+  transform: scale(1.05);
+}
+
+/* Botón para regresar al menú principal */
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.back-button:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+}
+
+/* Adaptaciones para pantallas móviles */
+@media (max-width: 768px) {
+  .container h1 {
+    font-size: 20px;
+  }
+
+  .search-bar {
+    font-size: 14px;
+  }
+
+  .mazo-item h3 {
+    font-size: 16px;
+  }
+
+  .view-button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .back-button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+

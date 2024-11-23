@@ -3,33 +3,38 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
   text-align: center;
 }
 
-/* Ajustes generales para móviles */
+/* Ajustes generales para móviles -----------NO SE-----------*/ 
 * {
   box-sizing: border-box;
 }
 
-/* Login Screen */
+/* Login Screen con fondo de imagen */
 #loginScreen {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #333;
+  background-image: url('https://i.pinimg.com/736x/fb/73/20/fb7320615f1c8c7cb5e69ddd48f1c15e.jpg'); /* Imagen para dispositivos móviles */
+  background-size: cover;
+  background-position: center;
   color: white;
   padding: 20px;
 }
 
+/* Estilo del formulario */
 #loginScreen form {
   display: flex;
   flex-direction: column;
   gap: 15px;
   width: 100%;
   max-width: 400px;
+  background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el formulario */
+  padding: 20px;
+  border-radius: 10px;
 }
 
 #loginScreen input {
@@ -57,6 +62,13 @@ body {
   color: red;
   margin-top: 10px;
   font-size: 14px;
+}
+
+/* Media Query para dispositivos de escritorio */
+@media (min-width: 768px) {
+  #loginScreen {
+    background-image: url('https://i.pinimg.com/736x/42/65/e0/4265e069b5650d2aca55ac3911526250.jpg'); /* Imagen para dispositivos de escritorio */
+  }
 }
 
 /* Header para buscador */

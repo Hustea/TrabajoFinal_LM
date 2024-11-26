@@ -77,21 +77,6 @@ body {
   margin-bottom: 20px;
 }
 
-#menuScreen button {
-  padding: 75px 100px;
-  font-size: 18px;
-  margin: 10px;
-  background-color: #008000;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-#menuScreen button:hover {
-  background-color: #00800B;
-}
-
 .menu-btn {
     background-size: cover; /* Ajusta para cubrir todo el botón */
     background-position: center; /* Centra la imagen */
@@ -110,11 +95,11 @@ body {
 }
 
 #search-cards {
-    background-image: url('ruta-a-la-imagen-de-cards.jpg'); /* Cambia por tu imagen */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfjfxO_d0dMVEIA_6iRfx6jTF-PmiZd2Dmjg&s'); /* Cambia por tu imagen */
 }
 
 #search-decks {
-    background-image: url('ruta-a-la-imagen-de-decks.jpg'); /* Cambia por tu imagen */
+    background-image: url('https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcREjcFeYwa8oSaf18bDnfdVm1-sMNCAt6oRz2vR95JnWsDa1AbiAsiUtW-qs0jlMF6hBG41ImYOOyEl1X5omY6jvqKB2UDpHvECb0yMW-lclBo4hpVxSGZEfVLsiqdkziVxo8_mR4U&usqp=CAc'); /* Cambia por tu imagen */
 }
 
 

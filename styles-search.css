@@ -18,7 +18,7 @@ header {
 }
 
 header input {
-  width: calc(100% - 100px); /* Deja espacio para el botón */
+  width: calc(100% - 150px); /* Deja espacio para el botón --100*/
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ddd;

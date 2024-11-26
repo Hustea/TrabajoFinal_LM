@@ -1,24 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscador de Mazos MTG</title>
-    <link rel="stylesheet" href="styles-mazos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscar Mazos</title>
+  <link rel="stylesheet" href="styles-mazos.css">
 </head>
 <body>
-    <header>
-        <h1>Buscador de Mazos MTG</h1>
-    </header>
-    <main>
-        <section class="search-container">
-            <input type="text" id="search-input" placeholder="Buscar mazos..." />
-            <button id="search-button">Buscar</button>
-        </section>
-        <section id="results-container" class="results-container">
-            <!-- Resultados de la búsqueda aparecerán aquí -->
-        </section>
-    </main>
-    <script src="mazos.js"></script>
+  <div class="mazos-container">
+    <h1>Buscador de Mazos</h1>
+    <input type="text" id="searchBar" placeholder="Escribe el nombre del mazo...">
+    <div id="mazosResultados" class="resultados-contenedor"></div>
+  </div>
+  <script src="mazos.js"></script>
 </body>
 </html>

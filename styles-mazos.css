@@ -1,94 +1,130 @@
-/* Estilo general */
+/* Estilos generales */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-}
-
-/* Contenedor principal */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-/* Encabezado del buscador */
-.search-header {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
     text-align: center;
+}
+
+header {
     background-color: #333;
     color: white;
-    padding: 20px;
-    width: 100%;
+    padding: 15px 0;
+    margin-bottom: 20px;
 }
 
-.search-header h1 {
+header h1 {
     margin: 0;
     font-size: 24px;
 }
 
-/* Barra de búsqueda */
-.search-bar {
-    margin-top: 10px;
+/* Contenedor del buscador */
+.search-container {
+    margin: 20px auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 10px;
 }
 
-.search-bar input {
+#search-input {
     width: 300px;
     padding: 10px;
+    font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
-    outline: none;
-    font-size: 16px;
+    border-radius: 4px;
 }
 
-.search-bar button {
+#search-button {
     padding: 10px 20px;
-    border: none;
-    background-color: #007bff;
-    color: white;
     font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 0 4px 4px 0;
 }
 
-.search-bar button:hover {
+#search-button:hover {
     background-color: #0056b3;
 }
 
 /* Contenedor de resultados */
 .results-container {
-    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    width: 100%;
+    margin: 20px;
 }
 
 .result-item {
+    width: 200px;
     background-color: white;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 200px;
+    border-radius: 4px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
 .result-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .result-item img {
     width: 100%;
-    border-radius: 8px 8px 0 0;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
 }
 
 .result-item h3 {
-    margin: 10px 0;
-    font-size: 18px;
+    font-size: 16px;
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* Lista de cartas */
+.mazo-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.card-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card-list li {
+    background-color: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Botón de regresar */
+.back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
 }

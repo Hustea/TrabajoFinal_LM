@@ -1,0 +1,38 @@
+.mazos-container {
+  text-align: center;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+#searchBar {
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.resultados-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.mazo-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.mazo-card img {
+  width: 100%;
+  height: auto;
+}
+
+.mazo-card:hover {
+  transform: scale(1.05);
+}

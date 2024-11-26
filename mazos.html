@@ -3,22 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buscador de Mazos</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Buscar Mazos</title>
+  <link rel="stylesheet" href="Styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Buscador de Mazos de Commander</h1>
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Escribe el nombre del mazo..."
-      class="search-bar"
-    />
-    <div id="mazosList" class="mazos-list">
-      <!-- Aquí se mostrarán los resultados -->
-    </div>
-    <button class="back-button" onclick="location.href='menu.html'">Volver al Menú</button>
+  <div class="mazos-container">
+    <h1>Buscador de Mazos</h1>
+    <input type="text" id="searchBar" placeholder="Escribe el nombre del mazo...">
+    <div id="mazosResultados" class="resultados-contenedor"></div>
   </div>
   <script src="mazos.js"></script>
 </body>

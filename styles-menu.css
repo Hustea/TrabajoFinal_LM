@@ -1,1 +1,70 @@
+/* Estilo general de la página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('img/menu-background-mobile.jpg'); /* Fondo para móviles */
+}
 
+@media (min-width: 768px) {
+    body {
+        background-image: url('img/menu-background-desktop.jpg'); /* Fondo para escritorio */
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Título del menú */
+.menu h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Botones del menú */
+.menu-btn {
+    background-size: cover; /* La imagen cubre todo el botón */
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 80%; /* Ancho del botón (ajustable para móviles) */
+    max-width: 300px; /* Tamaño máximo en pantallas grandes */
+    height: 150px; /* Altura fija para uniformidad */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Texto visible sobre las imágenes */
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para mejor contraste */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto al pasar el ratón */
+.menu-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón 1: Buscar Cartas */
+#search-cards {
+    background-image: url('img/cards-button.jpg'); /* Reemplaza con tu imagen */
+}
+
+/* Botón 2: Buscar Mazos */
+#search-decks {
+    background-image: url('img/decks-button.jpg'); /* Reemplaza con tu imagen */
+}

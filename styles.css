@@ -92,6 +92,32 @@ body {
   background-color: #00800B;
 }
 
+/*-------------------------*/
+
+.menu-btn {
+    background-size: cover; /* Ajusta para cubrir todo el botón */
+    background-position: center; /* Centra la imagen */
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 90%; /* Mantiene el tamaño responsivo */
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Color del texto */
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Un poco de sombra para el texto */
+}
+
+#search-cards {
+    background-image: url('ruta-a-la-imagen-de-cards.jpg'); /* Cambia por tu imagen */
+}
+
+#search-decks {
+    background-image: url('ruta-a-la-imagen-de-decks.jpg'); /* Cambia por tu imagen */
+}
 /*-------------------------------- Header para buscador --------------------------------*/
 header {
   background-color: #333;

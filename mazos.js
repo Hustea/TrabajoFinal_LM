@@ -1,67 +1,90 @@
-// URL base del repositorio GitHub con los JSON de mazos
-const githubBaseUrl = "https://raw.github.com/Westly/CommanderPrecons/tree/main/precon_json/";
+// Archivo con las listas de mazos
+const mazosFile = 'Squirreled Away.txt'; // Cambiar si hay más archivos
 
+// Función para cargar y procesar los datos
+async function cargarMazos() {
+  try {
+    const response = await fetch(mazosFile);
+    const data = await response.text();
 
-// Listado de nombres de archivos JSON (puedes completarlo con más nombres si lo deseas)
-const mazos = [
-  "https://raw.githubusercontent.com/Westly/CommanderPrecons/refs/heads/main/precon_json/Animated%20Army%20(Bloomburrow%20Commander%20Precon%20Decklist).json",
-  "https://raw.githubusercontent.com/Westly/CommanderPrecons/refs/heads/main/precon_json/Family%20Matters%20(Bloomburrow%20Commander%20Precon%20Decklist).json",
-  "https://raw.githubusercontent.com/Westly/CommanderPrecons/refs/heads/main/precon_json/Peace%20Offering%20(Bloomburrow%20Commander%20Precon%20Decklist).json",
-  "https://raw.githubusercontent.com/Westly/CommanderPrecons/refs/heads/main/precon_json/Squirreled%20Away%20(Bloomburrow%20Commander%20Precon%20Decklist).json"
-  // Agrega más mazos aquí...
-];
+    // Procesar archivo de texto
+    const mazos = procesarMazos(data);
 
-// Referencias al DOM
-const searchInput = document.getElementById("searchInput");
-const mazosList = document.getElementById("mazosList");
+    // Añadir evento al buscador
+    document.getElementById('searchBar').addEventListener('input', (e) => {
+      mostrarResultados(e.target.value, mazos);
+    });
 
-// Función para mostrar los mazos en la lista
-function renderMazos(filteredMazos) {
-  mazosList.innerHTML = ""; // Limpiamos la lista
-  if (filteredMazos.length === 0) {
-    mazosList.innerHTML = "<p>No se encontraron mazos.</p>";
-    return;
+  } catch (error) {
+    console.error("Error al cargar el archivo:", error);
   }
+}
 
-  // Crear un elemento por cada mazo
-  filteredMazos.forEach((mazo) => {
-    const mazoItem = document.createElement("div");
-    mazoItem.className = "mazo-item";
-    mazoItem.innerHTML = `
-      <h3>${mazo.replace(".json", "")}</h3>
-      <button class="view-button" onclick="fetchMazo('${mazo}')">Ver Mazo</button>
+// Procesar el archivo de texto en un formato más utilizable
+function procesarMazos(data) {
+  const lines = data.split('\n');
+  const mazos = [];
+  let mazoActual = null;
+
+  lines.forEach((line) => {
+    if (!line.trim()) return;
+
+    if (line.match(/^\d/)) {
+      const [cantidad, ...nombrePartes] = line.split(' ');
+      const nombreCarta = nombrePartes.join(' ').split('(')[0].trim();
+      mazoActual.cartas.push({ cantidad: parseInt(cantidad), nombre: nombreCarta });
+    } else {
+      if (mazoActual) mazos.push(mazoActual);
+      mazoActual = { nombre: line.trim(), cartas: [] };
+    }
+  });
+
+  if (mazoActual) mazos.push(mazoActual);
+  return mazos;
+}
+
+// Mostrar resultados basados en la búsqueda
+function mostrarResultados(query, mazos) {
+  const contenedor = document.getElementById('mazosResultados');
+  contenedor.innerHTML = '';
+
+  const resultados = mazos.filter((mazo) =>
+    mazo.nombre.toLowerCase().includes(query.toLowerCase())
+  );
+
+  resultados.forEach((mazo) => {
+    const card = document.createElement('div');
+    card.className = 'mazo-card';
+    card.innerHTML = `
+      <img src="https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(
+        mazo.cartas[0].nombre
+      )}" alt="${mazo.nombre}">
+      <h3>${mazo.nombre}</h3>
     `;
-    mazosList.appendChild(mazoItem);
+
+    // Evento al hacer clic
+    card.addEventListener('click', () => mostrarCartas(mazo));
+    contenedor.appendChild(card);
   });
 }
 
-// Función para filtrar los mazos según el texto ingresado
-function filterMazos() {
-  const query = searchInput.value.toLowerCase();
-  const filteredMazos = mazos.filter((mazo) =>
-    mazo.toLowerCase().includes(query)
-  );
-  renderMazos(filteredMazos);
+// Mostrar las cartas del mazo seleccionado
+function mostrarCartas(mazo) {
+  const contenedor = document.getElementById('mazosResultados');
+  contenedor.innerHTML = `<h2>${mazo.nombre}</h2>`;
+
+  mazo.cartas.forEach((carta) => {
+    const cartaDiv = document.createElement('div');
+    cartaDiv.className = 'mazo-card';
+    cartaDiv.innerHTML = `
+      <p>${carta.cantidad}x ${carta.nombre}</p>
+      <img src="https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(
+        carta.nombre
+      )}" alt="${carta.nombre}">
+    `;
+    contenedor.appendChild(cartaDiv);
+  });
 }
 
-// Función para obtener los datos de un mazo específico
-function fetchMazo(mazoFile) {
-  const url = githubBaseUrl + mazoFile;
-
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      alert(`¡Datos del mazo "${mazoFile.replace('.json', '')}" cargados correctamente!`);
-      console.log(data); // Aquí puedes mostrar los datos en la consola o procesarlos.
-    })
-    .catch((error) => {
-      console.error("Error al cargar el archivo JSON:", error);
-      alert("No se pudo cargar el mazo. Intenta de nuevo.");
-    });
-}
-
-// Escuchar el evento input en la barra de búsqueda
-searchInput.addEventListener("input", filterMazos);
-
-// Mostrar todos los mazos al cargar la página
-renderMazos(mazos);
+// Inicializar
+cargarMazos();

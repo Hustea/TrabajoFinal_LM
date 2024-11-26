@@ -77,6 +77,21 @@ body {
   margin-bottom: 20px;
 }
 
+#menuScreen button {
+  padding: 75px 100px;
+  font-size: 18px;
+  margin: 10px;
+  background-color: #008000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#menuScreen button:hover {
+  background-color: #00800B;
+}
+
 .menu-btn {
     background-size: cover; /* Ajusta para cubrir todo el botón */
     background-position: center; /* Centra la imagen */

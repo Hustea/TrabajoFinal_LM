@@ -92,32 +92,6 @@ body {
   background-color: #00800B;
 }
 
-.menu-btn {
-    background-size: cover; /* Ajusta para cubrir todo el botón */
-    background-position: center; /* Centra la imagen */
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    width: 90%; /* Mantiene el tamaño responsivo */
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white; /* Color del texto */
-    font-size: 18px;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Un poco de sombra para el texto */
-}
-
-#search-cards {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfjfxO_d0dMVEIA_6iRfx6jTF-PmiZd2Dmjg&s'); /* Cambia por tu imagen */
-}
-
-#search-decks {
-    background-image: url('https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcREjcFeYwa8oSaf18bDnfdVm1-sMNCAt6oRz2vR95JnWsDa1AbiAsiUtW-qs0jlMF6hBG41ImYOOyEl1X5omY6jvqKB2UDpHvECb0yMW-lclBo4hpVxSGZEfVLsiqdkziVxo8_mR4U&usqp=CAc'); /* Cambia por tu imagen */
-}
-
-
 /*-------------------------------- Header para buscador --------------------------------*/
 header {
   background-color: #333;

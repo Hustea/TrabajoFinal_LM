@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="styles-mazos.css">
 </head>
 <body>
-    <div class="container">
-        <header class="search-header">
-            <h1>Buscador de Mazos MTG</h1>
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Buscar mazos...">
-                <button id="searchButton">Buscar</button>
-            </div>
-        </header>
-        <main class="results-container" id="resultsContainer">
-            <!-- Aquí se mostrarán los mazos encontrados -->
-        </main>
-    </div>
+    <header>
+        <h1>Buscador de Mazos MTG</h1>
+    </header>
+    <main>
+        <section class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar mazos..." />
+            <button id="search-button">Buscar</button>
+        </section>
+        <section id="results-container" class="results-container">
+            <!-- Resultados de la búsqueda aparecerán aquí -->
+        </section>
+    </main>
     <script src="mazos.js"></script>
 </body>
 </html>

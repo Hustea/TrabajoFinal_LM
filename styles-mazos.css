@@ -68,3 +68,29 @@ button:hover {
 #carta-container {
   margin-top: 2rem;
 }
+
+/*----------------------------------*/
+
+.cartas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.carta {
+  text-align: center;
+}
+
+.carta img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.carta p {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+}
+

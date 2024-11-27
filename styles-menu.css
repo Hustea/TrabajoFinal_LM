@@ -6,7 +6,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('https://i.pinimg.com/736x/fb/73/20/fb7320615f1c8c7cb5e69ddd48f1c15e.jpg'); /* Fondo para móviles */
+    background-image: url('https://i.pinimg.com/736x/42/65/e0/4265e069b5650d2aca55ac3911526250.jpg'); /* Fondo para móviles https://i.pinimg.com/736x/fb/73/20/fb7320615f1c8c7cb5e69ddd48f1c15e.jpg*/
 }
 
 @media (min-width: 768px) {

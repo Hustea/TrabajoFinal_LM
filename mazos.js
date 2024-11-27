@@ -1,4 +1,4 @@
-/*document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const searchForm = document.querySelector('#search-form');
   const searchInput = document.querySelector('#search-input');
   const resultadosContainer = document.querySelector('#resultados');
@@ -109,77 +109,5 @@
     if (mazoActual) mazos.push(mazoActual);
     return mazos;
   }
-});
-*/
-
-document.addEventListener('DOMContentLoaded', () => {
-  const contenedorMazos = document.getElementById('resultados');
-
-  async function buscarImagen(nombreCarta) {
-    try {
-      // Realizamos una petición a la API de Scryfall
-      const respuesta = await fetch(`https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(nombreCarta)}`);
-      if (!respuesta.ok) throw new Error('No se encontró la carta.');
-      const datos = await respuesta.json();
-
-      // Devolvemos la URL de la imagen
-      return datos.image_uris?.normal || datos.image_uris?.large || datos.image_uris?.small || null;
-    } catch (error) {
-      console.error(`Error al buscar la imagen de la carta ${nombreCarta}:`, error);
-      return null; // Retornamos null si hay un error
-    }
-  }
-
-  async function mostrarMazo(mazo) {
-    contenedorMazos.innerHTML = ''; // Limpiamos el contenido actual
-    const titulo = document.createElement('h2');
-    titulo.textContent = `Cartas del mazo: ${mazo.nombre}`;
-    contenedorMazos.appendChild(titulo);
-
-    const grid = document.createElement('div');
-    grid.className = 'grid-cartas'; // Clase para diseño en grid
-    contenedorMazos.appendChild(grid);
-
-    // Iteramos las cartas del mazo
-    for (const carta of mazo.cartas) {
-      const cartaDiv = document.createElement('div');
-      cartaDiv.className = 'carta';
-
-      // Buscar la imagen de la carta
-      const imagenUrl = await buscarImagen(carta.nombre);
-      cartaDiv.innerHTML = `
-        <img src="${imagenUrl || 'ruta/a/imagen_generica.jpg'}" alt="${carta.nombre}">
-        <p>${carta.cantidad}x ${carta.nombre}</p>
-      `;
-      grid.appendChild(cartaDiv);
-    }
-  }
-
-  // Escuchamos los eventos para buscar mazos
-  document.getElementById('buscar').addEventListener('click', async () => {
-    const termino = document.getElementById('buscador').value.toLowerCase();
-    if (!termino) return;
-
-    // Buscar el mazo
-    const mazo = mazos.find((m) => m.nombre.toLowerCase().includes(termino));
-    if (!mazo) {
-      contenedorMazos.innerHTML = '<p>No se encontró el mazo.</p>';
-      return;
-    }
-
-    await mostrarMazo(mazo);
-  });
-
-  // Inicializamos con todos los mazos (puedes ajustar esto si no lo necesitas)
-  const listaMazos = document.getElementById('lista-mazos');
-  mazos.forEach((mazo) => {
-    const card = document.createElement('div');
-    card.className = 'mazo-card';
-    card.innerHTML = `
-      <h3>${mazo.nombre}</h3>
-    `;
-    card.addEventListener('click', () => mostrarMazo(mazo));
-    listaMazos.appendChild(card);
-  });
 });
 

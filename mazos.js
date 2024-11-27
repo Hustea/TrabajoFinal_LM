@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let mazos = []; // Aquí cargarás tus mazos desde el archivo o fuente
 
   // Cargar los mazos desde el archivo predefinido (solo ejemplo)
-  fetch('./Squirreled Away.txt')
+  fetch('Squirreled Away.txt')
     .then((response) => response.text())
     .then((data) => {
       mazos = parseMazos(data);

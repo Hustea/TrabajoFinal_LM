@@ -71,6 +71,13 @@ button:hover {
 
 /*----------------------------------*/
 
+
+.carta {
+  text-align: center;
+}
+
+/*--------------------------------------*/
+/*
 .cartas-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -78,9 +85,7 @@ button:hover {
   margin-top: 1rem;
 }
 
-.carta {
-  text-align: center;
-}
+
 
 .carta img {
   width: 100%;
@@ -94,3 +99,23 @@ button:hover {
   font-size: 0.9rem;
 }
 
+*/
+
+.grid-cartas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.carta img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carta p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 8px;
+}

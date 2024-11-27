@@ -1,90 +1,95 @@
-// Archivo con las listas de mazos
-const mazosFile = 'Squirreled Away.txt'; // Cambiar si hay más archivos
+document.addEventListener('DOMContentLoaded', () => {
+  const searchForm = document.querySelector('#search-form');
+  const searchInput = document.querySelector('#search-input');
+  const resultadosContainer = document.querySelector('#resultados');
+  const cartaContainer = document.querySelector('#carta-container');
 
-// Función para cargar y procesar los datos
-async function cargarMazos() {
-  try {
-    const response = await fetch(mazosFile);
-    const data = await response.text();
+  let mazos = []; // Aquí cargarás tus mazos desde el archivo o fuente
 
-    // Procesar archivo de texto
-    const mazos = procesarMazos(data);
+  // Cargar los mazos desde el archivo predefinido (solo ejemplo)
+  fetch('./Squirreled Away.txt')
+    .then((response) => response.text())
+    .then((data) => {
+      mazos = parseMazos(data);
+    })
+    .catch((error) => console.error('Error al cargar los mazos:', error));
 
-    // Añadir evento al buscador
-    document.getElementById('searchBar').addEventListener('input', (e) => {
-      mostrarResultados(e.target.value, mazos);
+  // Buscar mazos
+  searchForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const query = searchInput.value.trim().toLowerCase();
+
+    resultadosContainer.innerHTML = '';
+
+    const resultados = mazos.filter((mazo) =>
+      mazo.nombre.toLowerCase().includes(query)
+    );
+
+    resultados.forEach((mazo) => {
+      const card = document.createElement('div');
+      card.className = 'mazo-card';
+      card.innerHTML = `
+        <h3>${mazo.nombre}</h3>
+      `;
+      card.addEventListener('click', () => mostrarCartas(mazo));
+      resultadosContainer.appendChild(card);
+
+      // Cargar la imagen de la primera carta
+      const primeraCarta = mazo.cartas[0].nombre;
+      fetch(`https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(primeraCarta)}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const imageUrl = data.image_uris?.normal || data.image_uris?.small;
+          if (imageUrl) {
+            const img = document.createElement('img');
+            img.src = imageUrl;
+            img.alt = primeraCarta;
+            card.prepend(img);
+          } else {
+            console.error('No se encontró una imagen para la carta:', primeraCarta);
+          }
+        })
+        .catch((error) => console.error('Error al cargar la imagen de la carta:', error));
+    });
+  });
+
+  // Mostrar las cartas de un mazo
+  function mostrarCartas(mazo) {
+    cartaContainer.innerHTML = `
+      <h2>${mazo.nombre}</h2>
+      <ul>
+        ${mazo.cartas
+          .map(
+            (carta) => `<li>${carta.cantidad}x ${carta.nombre}</li>`
+          )
+          .join('')}
+      </ul>
+    `;
+  }
+
+  // Parsear el archivo de texto de mazos
+  function parseMazos(data) {
+    const lines = data.split('\n');
+    const mazos = [];
+    let mazoActual = null;
+
+    lines.forEach((line) => {
+      if (!line.trim()) return;
+
+      const match = line.match(/^(\d+)\s+(.+?)(\s\(.+?\))?\s*$/);
+      if (match) {
+        const [, cantidad, nombre] = match;
+        mazoActual.cartas.push({
+          cantidad: parseInt(cantidad, 10),
+          nombre: nombre.trim(),
+        });
+      } else {
+        if (mazoActual) mazos.push(mazoActual);
+        mazoActual = { nombre: line.trim(), cartas: [] };
+      }
     });
 
-  } catch (error) {
-    console.error("Error al cargar el archivo:", error);
+    if (mazoActual) mazos.push(mazoActual);
+    return mazos;
   }
-}
-
-// Procesar el archivo de texto en un formato más utilizable
-function procesarMazos(data) {
-  const lines = data.split('\n');
-  const mazos = [];
-  let mazoActual = null;
-
-  lines.forEach((line) => {
-    if (!line.trim()) return;
-
-    if (line.match(/^\d/)) {
-      const [cantidad, ...nombrePartes] = line.split(' ');
-      const nombreCarta = nombrePartes.join(' ').split('(')[0].trim();
-      mazoActual.cartas.push({ cantidad: parseInt(cantidad), nombre: nombreCarta });
-    } else {
-      if (mazoActual) mazos.push(mazoActual);
-      mazoActual = { nombre: line.trim(), cartas: [] };
-    }
-  });
-
-  if (mazoActual) mazos.push(mazoActual);
-  return mazos;
-}
-
-// Mostrar resultados basados en la búsqueda
-function mostrarResultados(query, mazos) {
-  const contenedor = document.getElementById('mazosResultados');
-  contenedor.innerHTML = '';
-
-  const resultados = mazos.filter((mazo) =>
-    mazo.nombre.toLowerCase().includes(query.toLowerCase())
-  );
-
-  resultados.forEach((mazo) => {
-    const card = document.createElement('div');
-    card.className = 'mazo-card';
-    card.innerHTML = `
-      <img src="https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(
-        mazo.cartas[0].nombre
-      )}" alt="${mazo.nombre}">
-      <h3>${mazo.nombre}</h3>
-    `;
-
-    // Evento al hacer clic
-    card.addEventListener('click', () => mostrarCartas(mazo));
-    contenedor.appendChild(card);
-  });
-}
-
-// Mostrar las cartas del mazo seleccionado
-function mostrarCartas(mazo) {
-  const contenedor = document.getElementById('mazosResultados');
-  contenedor.innerHTML = `<h2>${mazo.nombre}</h2>`;
-
-  mazo.cartas.forEach((carta) => {
-    const cartaDiv = document.createElement('div');
-    cartaDiv.className = 'mazo-card';
-    cartaDiv.innerHTML = `
-      <p>${carta.cantidad}x ${carta.nombre}</p>
-      <img src="https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(
-        carta.nombre
-      )}" alt="${carta.nombre}">
-    `;
-    contenedor.appendChild(cartaDiv);
-  });
-}
-
-// Inicializar
-cargarMazos();
+});

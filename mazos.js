@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let mazos = []; // Aquí cargarás tus mazos desde el archivo o fuente
 
-  // Cargar los mazos desde el archivo predefinido (solo ejemplo)
-  fetch('Squirreled Away.txt')
+  // Cargar los mazos desde el archivo predefinido
+  fetch('./Squirreled Away.txt')
     .then((response) => response.text())
     .then((data) => {
       mazos = parseMazos(data);
@@ -53,18 +53,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Mostrar las cartas de un mazo
+  // Mostrar las cartas de un mazo con imágenes
   function mostrarCartas(mazo) {
     cartaContainer.innerHTML = `
       <h2>${mazo.nombre}</h2>
-      <ul>
-        ${mazo.cartas
-          .map(
-            (carta) => `<li>${carta.cantidad}x ${carta.nombre}</li>`
-          )
-          .join('')}
-      </ul>
+      <div class="cartas-grid"></div>
     `;
+    const cartasGrid = cartaContainer.querySelector('.cartas-grid');
+
+    mazo.cartas.forEach((carta) => {
+      const cartaDiv = document.createElement('div');
+      cartaDiv.className = 'carta';
+
+      // Hacer la solicitud a Scryfall para obtener la imagen de la carta
+      fetch(`https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(carta.nombre)}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const imageUrl = data.image_uris?.normal || data.image_uris?.small;
+          cartaDiv.innerHTML = `
+            <img src="${imageUrl}" alt="${carta.nombre}">
+            <p>${carta.cantidad}x ${carta.nombre}</p>
+          `;
+          cartasGrid.appendChild(cartaDiv);
+        })
+        .catch((error) => {
+          console.error('Error al cargar la imagen de la carta:', error);
+          cartaDiv.innerHTML = `<p>${carta.cantidad}x ${carta.nombre} (Imagen no encontrada)</p>`;
+          cartasGrid.appendChild(cartaDiv);
+        });
+    });
   }
 
   // Parsear el archivo de texto de mazos

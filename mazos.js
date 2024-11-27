@@ -22,25 +22,7 @@ async function cargarMazos() {
 
 // Procesar el archivo de texto en un formato más utilizable
 function procesarMazos(data) {
-  const lines = data.split('\n');
-  const mazos = [];
-  let mazoActual = null;
-
-  lines.forEach((line) => {
-    if (!line.trim()) return;
-
-    if (line.match(/^\d/)) {
-      const [cantidad, ...nombrePartes] = line.split(' ');
-      const nombreCarta = nombrePartes.join(' ').split('(')[0].trim();
-      mazoActual.cartas.push({ cantidad: parseInt(cantidad), nombre: nombreCarta });
-    } else {
-      if (mazoActual) mazos.push(mazoActual);
-      mazoActual = { nombre: line.trim(), cartas: [] };
-    }
-  });
-
-  if (mazoActual) mazos.push(mazoActual);
-  return mazos;
+  // ... (tu código existente)
 }
 
 // Mostrar resultados basados en la búsqueda
@@ -60,31 +42,43 @@ function mostrarResultados(query, mazos) {
         mazo.cartas[0].nombre
       )}" alt="${mazo.nombre}">
       <h3>${mazo.nombre}</h3>
+      <div class="cartas-container"></div>
     `;
 
     // Evento al hacer clic
-    card.addEventListener('click', () => mostrarCartas(mazo));
+    card.addEventListener('click', () => {
+      const cartasContainer = card.querySelector('.cartas-container');
+      cartasContainer.innerHTML = '';
+
+      mazo.cartas.forEach((carta) => {
+        const cartaDiv = document.createElement('div');
+        cartaDiv.className = 'carta';
+        cartaDiv.textContent = `${carta.cantidad}x ${carta.nombre}`;
+
+        cartaDiv.addEventListener('click', () => {
+          // Mostrar la imagen de la carta en un modal (opcional)
+          // Aquí puedes implementar la lógica para mostrar la imagen en un modal o directamente en la cartaDiv
+          // Por ejemplo, usando un modal:
+          // mostrarModal(carta.nombre);
+
+          // O directamente en la cartaDiv:
+          fetch(`https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(carta.nombre)}`)
+            .then(response => response.json())
+            .then(data => {
+              const img = document.createElement('img');
+              img.src = data.image_uris.png;
+              cartaDiv.appendChild(img);
+            });
+        });
+
+        cartasContainer.appendChild(cartaDiv);
+      });
+
+      cartasContainer.style.display = 'block';
+    });
+
     contenedor.appendChild(card);
   });
 }
-
-// Mostrar las cartas del mazo seleccionado
-function mostrarCartas(mazo) {
-  const contenedor = document.getElementById('mazosResultados');
-  contenedor.innerHTML = `<h2>${mazo.nombre}</h2>`;
-
-  mazo.cartas.forEach((carta) => {
-    const cartaDiv = document.createElement('div');
-    cartaDiv.className = 'mazo-card';
-    cartaDiv.innerHTML = `
-      <p>${carta.cantidad}x ${carta.nombre}</p>
-      <img src="https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(
-        carta.nombre
-      )}" alt="${carta.nombre}">
-    `;
-    contenedor.appendChild(cartaDiv);
-  });
-}
-
 // Inicializar
 cargarMazos();

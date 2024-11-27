@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buscar Mazos</title>
+  <title>Buscador de Mazos MTG</title>
   <link rel="stylesheet" href="styles-mazos.css">
 </head>
 <body>
-  <div class="mazos-container">
-    <h1>Buscador de Mazos</h1>
-    <input type="text" id="searchBar" placeholder="Escribe el nombre del mazo...">
-    <div id="mazosResultados" class="resultados-contenedor"></div>
-  </div>
+  <header>
+    <h1>Buscador de Mazos MTG</h1>
+  </header>
+  <main>
+    <form id="search-form">
+      <input id="search-input" type="text" placeholder="Buscar mazos...">
+      <button type="submit">Buscar</button>
+    </form>
+    <div id="resultados"></div>
+    <div id="carta-container"></div>
+  </main>
   <script src="mazos.js"></script>
 </body>
 </html>

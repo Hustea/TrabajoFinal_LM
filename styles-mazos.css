@@ -10,10 +10,6 @@ header {
   color: white;
   padding: 1rem;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
 }
 
 main {
@@ -21,11 +17,9 @@ main {
 }
 
 #search-form {
-  margin-top: 1rem;
   display: flex;
   justify-content: center;
-  width: 100%; /* Asegura que el formulario ocupe el ancho completo del header */
-  padding: 0 1rem; /* Añade espacio lateral */
+  margin-bottom: 2rem;
 }
 
 #search-input {

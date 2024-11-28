@@ -11,12 +11,21 @@
     <h1>Buscador de Mazos</h1>
   </header>
   <main>
-    <form id="search-form">
-      <input id="search-input" type="text" placeholder="Buscar mazos...">
-      <button type="submit">Buscar</button>
-    </form>
-    <div id="resultados"></div>
-    <div id="carta-container"></div>
+    <!-- Vista Principal -->
+    <section id="vista-principal">
+      <form id="search-form">
+        <input id="search-input" type="text" placeholder="Buscar mazos...">
+        <button type="submit">Buscar</button>
+      </form>
+      <div id="resultados"></div>
+    </section>
+
+    <!-- Vista Detalles -->
+    <section id="vista-detalles" style="display: none;">
+      <button id="volver">Volver</button>
+      <h2 id="titulo-mazo"></h2>
+      <div id="cartas-grid" class="cartas-grid"></div>
+    </section>
   </main>
   <script src="mazos.js"></script>
 </body>

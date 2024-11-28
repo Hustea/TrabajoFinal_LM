@@ -2,9 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchForm = document.querySelector('#search-form');
   const searchInput = document.querySelector('#search-input');
   const resultadosContainer = document.querySelector('#resultados');
-  const cartaContainer = document.querySelector('#carta-container');
+  const vistaPrincipal = document.querySelector('#vista-principal');
+  const vistaDetalles = document.querySelector('#vista-detalles');
+  const tituloMazo = document.querySelector('#titulo-mazo');
+  const cartasGrid = document.querySelector('#cartas-grid');
+  const volverBtn = document.querySelector('#volver');
 
-  let mazos = []; // Aquí cargarás tus mazos desde el archivo o fuente
+  let mazos = []; // Aquí se cargarán los mazos desde el archivo Squirreled Away.txt
 
   // Cargar los mazos desde el archivo predefinido
   fetch('./Squirreled Away.txt')
@@ -14,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch((error) => console.error('Error al cargar los mazos:', error));
 
-  // Buscar mazos
+  // Manejar el formulario de búsqueda
   searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const query = searchInput.value.trim().toLowerCase();
@@ -28,14 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
     resultados.forEach((mazo) => {
       const card = document.createElement('div');
       card.className = 'mazo-card';
-      card.innerHTML = `
-        <h3>${mazo.nombre}</h3>
-      `;
-      card.addEventListener('click', () => mostrarCartas(mazo));
-      resultadosContainer.appendChild(card);
+      card.innerHTML = `<h3>${mazo.nombre}</h3>`;
 
       // Cargar la imagen de la primera carta
-      const primeraCarta = mazo.cartas[0].nombre;
+      const primeraCarta = mazo.cartas[0]?.nombre || 'Unknown';
       fetch(`https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(primeraCarta)}`)
         .then((response) => response.json())
         .then((data) => {
@@ -45,27 +45,32 @@ document.addEventListener('DOMContentLoaded', () => {
             img.src = imageUrl;
             img.alt = primeraCarta;
             card.prepend(img);
-          } else {
-            console.error('No se encontró una imagen para la carta:', primeraCarta);
           }
         })
         .catch((error) => console.error('Error al cargar la imagen de la carta:', error));
+
+      // Al hacer clic en el mazo, se muestra la vista de detalles
+      card.addEventListener('click', () => mostrarDetalleMazo(mazo));
+      resultadosContainer.appendChild(card);
     });
   });
 
-  // Mostrar las cartas de un mazo con imágenes
-  function mostrarCartas(mazo) {
-    cartaContainer.innerHTML = `
-      <h2>${mazo.nombre}</h2>
-      <div class="cartas-grid"></div>
-    `;
-    const cartasGrid = cartaContainer.querySelector('.cartas-grid');
+  // Función para mostrar los detalles de un mazo
+  function mostrarDetalleMazo(mazo) {
+    vistaPrincipal.style.display = 'none';
+    vistaDetalles.style.display = 'block';
 
+    // Actualizar el título del mazo
+    tituloMazo.textContent = mazo.nombre;
+
+    // Limpiar el contenedor de cartas
+    cartasGrid.innerHTML = '';
+
+    // Mostrar las cartas del mazo
     mazo.cartas.forEach((carta) => {
       const cartaDiv = document.createElement('div');
       cartaDiv.className = 'carta';
 
-      // Hacer la solicitud a Scryfall para obtener la imagen de la carta
       fetch(`https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(carta.nombre)}`)
         .then((response) => response.json())
         .then((data) => {
@@ -84,7 +89,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Parsear el archivo de texto de mazos
+  // Volver a la vista principal
+  volverBtn.addEventListener('click', () => {
+    vistaDetalles.style.display = 'none';
+    vistaPrincipal.style.display = 'block';
+  });
+
+  // Función para parsear el archivo de texto Squirreled Away.txt
   function parseMazos(data) {
     const lines = data.split('\n');
     const mazos = [];
@@ -110,4 +121,3 @@ document.addEventListener('DOMContentLoaded', () => {
     return mazos;
   }
 });
-

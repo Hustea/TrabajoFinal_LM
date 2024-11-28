@@ -42,60 +42,31 @@ button:hover {
   background-color: #0056b3;
 }
 
-#resultados {
+#resultados, .cartas-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
 }
 
-.mazo-card {
+.mazo-card, .carta {
   background: white;
   border: 1px solid #ddd;
   border-radius: 5px;
-  overflow: hidden;
-  width: 200px;
   text-align: center;
+  padding: 1rem;
+  width: 200px;
+}
+
+.carta img, .mazo-card img {
+  width: 100%;
+  height: auto;
+}
+
+#vista-detalles {
   padding: 1rem;
 }
 
-.mazo-card img {
-  width: 100%;
-  height: auto;
-  display: block;
+button#volver {
+  margin-bottom: 1rem;
 }
-
-#carta-container {
-  margin-top: 2rem;
-}
-
-/*----------------------------------*/
-
-
-.carta {
-  text-align: center;
-}
-
-
-.cartas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-
-
-.carta img {
-  width: 100%;
-  height: auto;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.carta p {
-  margin: 0.5rem 0 0;
-  font-size: 0.9rem;
-}
-
-

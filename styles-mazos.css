@@ -16,37 +16,68 @@ main {
   padding: 1rem;
 }
 
+#search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+#search-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  flex: 1;
+  max-width: 300px;
+}
+
 button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 80px;
+}
+/*
+{
   padding: 0.5rem 1rem;
   font-size: 1rem;
   background-color: #007BFF;
   color: white;
   border: none;
   cursor: pointer;
-  margin-bottom: 1rem;
 }
-
+*/
 button:hover {
   background-color: #0056b3;
 }
 
-.descargar-btn {
-  background-color: #28a745;
-}
-
-.descargar-btn:hover {
-  background-color: #218838;
-}
-
-.cartas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+#resultados, .cartas-grid {
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
 }
 
-.carta img {
-  width: 100%;
-  height: auto;
+.mazo-card, .carta {
+  background: white;
   border: 1px solid #ddd;
   border-radius: 5px;
+  text-align: center;
+  padding: 1rem;
+  width: 200px;
+}
+
+.carta img, .mazo-card img {
+  width: 100%;
+  height: auto;
+}
+
+#vista-detalles {
+  padding: 1rem;
+}
+
+button#volver {
+  margin-bottom: 1rem;
 }

@@ -36,8 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Cargar la imagen de la primera carta
       const primeraCarta = mazo.cartas[0]?.nombre || 'Unknown';
-      obtenerImagenCarta(primeraCarta)
-        .then((imageUrl) => {
+      fetch(`https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(primeraCarta)}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const imageUrl = data.image_uris?.normal || data.image_uris?.small;
           if (imageUrl) {
             const img = document.createElement('img');
             img.src = imageUrl;
@@ -69,16 +71,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const cartaDiv = document.createElement('div');
       cartaDiv.className = 'carta';
 
-      obtenerImagenCarta(carta.nombre)
-        .then((imageUrl) => {
-          if (imageUrl) {
-            cartaDiv.innerHTML = `
-              <img src="${imageUrl}" alt="${carta.nombre}">
-              <p>${carta.cantidad}x ${carta.nombre}</p>
-            `;
-          } else {
-            cartaDiv.innerHTML = `<p>${carta.cantidad}x ${carta.nombre} (Imagen no encontrada)</p>`;
-          }
+      fetch(`https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(carta.nombre)}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const imageUrl = data.image_uris?.normal || data.image_uris?.small;
+          cartaDiv.innerHTML = `
+            <img src="${imageUrl}" alt="${carta.nombre}">
+            <p>${carta.cantidad}x ${carta.nombre}</p>
+          `;
           cartasGrid.appendChild(cartaDiv);
         })
         .catch((error) => {
@@ -119,23 +119,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (mazoActual) mazos.push(mazoActual);
     return mazos;
-  }
-
-  // Función para obtener la imagen de una carta priorizando la primera reimpresión
-  async function obtenerImagenCarta(nombreCarta) {
-    try {
-      const response = await fetch(`https://api.scryfall.com/cards/search?q=!${encodeURIComponent(nombreCarta)}`);
-      const data = await response.json();
-
-      if (data.data && data.data.length > 0) {
-        const primeraCarta = data.data[0];
-        return primeraCarta.image_uris?.normal || primeraCarta.image_uris?.small || null;
-      } else {
-        return null;
-      }
-    } catch (error) {
-      console.error('Error al obtener los datos de la carta:', error);
-      return null;
-    }
   }
 });

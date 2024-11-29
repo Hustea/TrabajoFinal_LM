@@ -2,8 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchForm = document.querySelector('#search-form');
   const searchInput = document.querySelector('#search-input');
   const resultadosContainer = document.querySelector('#resultados');
+  const vistaPrincipal = document.querySelector('#vista-principal');
+  const vistaDetalles = document.querySelector('#vista-detalles');
+  const tituloMazo = document.querySelector('#titulo-mazo');
+  const cartasGrid = document.querySelector('#cartas-grid');
+  const volverBtn = document.querySelector('#volver');
 
-  let mazos = [];
+  let mazos = []; // Aquí se cargarán los mazos desde el archivo Squirreled Away.txt
 
   // Cargar los mazos desde el archivo predefinido
   fetch('./Squirreled Away.txt')
@@ -13,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch((error) => console.error('Error al cargar los mazos:', error));
 
-  // Buscar mazos
+  // Manejar el formulario de búsqueda
   searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const query = searchInput.value.trim().toLowerCase();
@@ -28,11 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = document.createElement('div');
       card.className = 'mazo-card';
       card.innerHTML = `<h3>${mazo.nombre}</h3>`;
-      card.addEventListener('click', () => abrirNuevaPestaña(mazo));
-      resultadosContainer.appendChild(card);
 
       // Cargar la imagen de la primera carta
-      const primeraCarta = mazo.cartas[0].nombre;
+      const primeraCarta = mazo.cartas[0]?.nombre || 'Unknown';
       fetch(`https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(primeraCarta)}`)
         .then((response) => response.json())
         .then((data) => {
@@ -44,38 +47,28 @@ document.addEventListener('DOMContentLoaded', () => {
             card.prepend(img);
           }
         })
-        .catch((error) => console.error('Error al cargar la imagen:', error));
+        .catch((error) => console.error('Error al cargar la imagen de la carta:', error));
+
+      // Al hacer clic en el mazo, se muestra la vista de detalles
+      card.addEventListener('click', () => mostrarDetalleMazo(mazo));
+      resultadosContainer.appendChild(card);
     });
   });
 
-  // Abrir nueva pestaña con la lista de cartas
-  function abrirNuevaPestaña(mazo) {
-    const nuevaVentana = window.open('', '_blank');
-    nuevaVentana.document.write(`
-      <html>
-      <head>
-        <title>${mazo.nombre}</title>
-        <link rel="stylesheet" href="styles-mazos.css">
-      </head>
-      <body>
-        <button id="volver" onclick="window.close()">Volver</button>
-        <button id="descargar" class="descargar-btn">Descargar lista</button>
-        <h1>${mazo.nombre}</h1>
-        <div class="cartas-grid"></div>
-        <script>
-          (${descargarMazo.toString()})();
-        </script>
-      </body>
-      </html>
-    `);
+  // Función para mostrar los detalles de un mazo
+  function mostrarDetalleMazo(mazo) {
+    vistaPrincipal.style.display = 'none';
+    vistaDetalles.style.display = 'block';
 
-    const cartasGrid = nuevaVentana.document.querySelector('.cartas-grid');
-    const botonDescargar = nuevaVentana.document.querySelector('#descargar');
+    // Actualizar el título del mazo
+    tituloMazo.textContent = mazo.nombre;
 
-    botonDescargar.addEventListener('click', () => descargarMazo(mazo, nuevaVentana));
+    // Limpiar el contenedor de cartas
+    cartasGrid.innerHTML = '';
 
+    // Mostrar las cartas del mazo
     mazo.cartas.forEach((carta) => {
-      const cartaDiv = nuevaVentana.document.createElement('div');
+      const cartaDiv = document.createElement('div');
       cartaDiv.className = 'carta';
 
       fetch(`https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(carta.nombre)}`)
@@ -88,26 +81,21 @@ document.addEventListener('DOMContentLoaded', () => {
           `;
           cartasGrid.appendChild(cartaDiv);
         })
-        .catch(() => {
+        .catch((error) => {
+          console.error('Error al cargar la imagen de la carta:', error);
           cartaDiv.innerHTML = `<p>${carta.cantidad}x ${carta.nombre} (Imagen no encontrada)</p>`;
           cartasGrid.appendChild(cartaDiv);
         });
     });
   }
 
-  // Descargar la lista de cartas como un archivo de texto
-  function descargarMazo(mazo, ventana) {
-    const contenido = mazo.cartas
-      .map((carta) => `${carta.cantidad}x ${carta.nombre}`)
-      .join('\n');
-    const blob = new Blob([contenido], { type: 'text/plain' });
-    const enlace = ventana.document.createElement('a');
-    enlace.href = URL.createObjectURL(blob);
-    enlace.download = `${mazo.nombre}.txt`;
-    enlace.click();
-  }
+  // Volver a la vista principal
+  volverBtn.addEventListener('click', () => {
+    vistaDetalles.style.display = 'none';
+    vistaPrincipal.style.display = 'block';
+  });
 
-  // Parsear el archivo de texto de mazos
+  // Función para parsear el archivo de texto Squirreled Away.txt
   function parseMazos(data) {
     const lines = data.split('\n');
     const mazos = [];

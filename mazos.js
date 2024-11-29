@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchForm = document.querySelector('#search-form');
   const searchInput = document.querySelector('#search-input');
   const resultadosContainer = document.querySelector('#resultados');
-  const cartaContainer = document.querySelector('#carta-container');
 
   let mazos = [];
 
@@ -29,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = document.createElement('div');
       card.className = 'mazo-card';
       card.innerHTML = `<h3>${mazo.nombre}</h3>`;
-      card.addEventListener('click', () => mostrarCartas(mazo));
+      card.addEventListener('click', () => abrirNuevaPestaña(mazo));
       resultadosContainer.appendChild(card);
 
       // Cargar la imagen de la primera carta
@@ -49,28 +48,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Mostrar las cartas de un mazo y añadir el botón de descarga
-  function mostrarCartas(mazo) {
-    cartaContainer.innerHTML = `
-      <button id="volver">Volver</button>
-      <button id="descargar" class="descargar-btn">Descargar lista</button>
-      <h2>${mazo.nombre}</h2>
-      <div class="cartas-grid"></div>
-    `;
-    const cartasGrid = cartaContainer.querySelector('.cartas-grid');
-    const botonDescargar = cartaContainer.querySelector('#descargar');
-    const botonVolver = cartaContainer.querySelector('#volver');
+  // Abrir nueva pestaña con la lista de cartas
+  function abrirNuevaPestaña(mazo) {
+    const nuevaVentana = window.open('', '_blank');
+    nuevaVentana.document.write(`
+      <html>
+      <head>
+        <title>${mazo.nombre}</title>
+        <link rel="stylesheet" href="styles-mazos.css">
+      </head>
+      <body>
+        <button id="volver" onclick="window.close()">Volver</button>
+        <button id="descargar" class="descargar-btn">Descargar lista</button>
+        <h1>${mazo.nombre}</h1>
+        <div class="cartas-grid"></div>
+        <script>
+          (${descargarMazo.toString()})();
+        </script>
+      </body>
+      </html>
+    `);
 
-    botonVolver.addEventListener('click', () => {
-      cartaContainer.innerHTML = '';
-    });
+    const cartasGrid = nuevaVentana.document.querySelector('.cartas-grid');
+    const botonDescargar = nuevaVentana.document.querySelector('#descargar');
 
-    botonDescargar.addEventListener('click', () => {
-      descargarMazo(mazo);
-    });
+    botonDescargar.addEventListener('click', () => descargarMazo(mazo, nuevaVentana));
 
     mazo.cartas.forEach((carta) => {
-      const cartaDiv = document.createElement('div');
+      const cartaDiv = nuevaVentana.document.createElement('div');
       cartaDiv.className = 'carta';
 
       fetch(`https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(carta.nombre)}`)
@@ -90,13 +95,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Descargar la lista de cartas del mazo como un archivo de texto
-  function descargarMazo(mazo) {
+  // Descargar la lista de cartas como un archivo de texto
+  function descargarMazo(mazo, ventana) {
     const contenido = mazo.cartas
       .map((carta) => `${carta.cantidad}x ${carta.nombre}`)
       .join('\n');
     const blob = new Blob([contenido], { type: 'text/plain' });
-    const enlace = document.createElement('a');
+    const enlace = ventana.document.createElement('a');
     enlace.href = URL.createObjectURL(blob);
     enlace.download = `${mazo.nombre}.txt`;
     enlace.click();

@@ -32,35 +32,36 @@ main {
 button {
   padding: 10px;
   font-size: 16px;
-  background-color: #007bff;
-  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 80px;
-}
-/*
-{
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-*/
-button:hover {
-  background-color: #0056b3;
 }
 
-#resultados, .cartas-grid {
+button:hover {
+  opacity: 0.8;
+}
+
+button#volver {
+  background-color: #007bff;
+  color: white;
+}
+
+button#descargar-lista {
+  background-color: #28a745;
+  color: white;
+  margin-left: 10px;
+}
+
+#resultados,
+.cartas-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
 }
 
-.mazo-card, .carta {
+.mazo-card,
+.carta {
   background: white;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -69,7 +70,8 @@ button:hover {
   width: 200px;
 }
 
-.carta img, .mazo-card img {
+.carta img,
+.mazo-card img {
   width: 100%;
   height: auto;
 }
@@ -78,32 +80,8 @@ button:hover {
   padding: 1rem;
 }
 
-button#volver {
-  margin-bottom: 1rem;
-}
-
-
-
-/* Estilo para el contenedor de botones----------------------------------- */
-.botones {
+#botones-detalle {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  gap: 10px; /* Espaciado entre botones */
   margin-bottom: 1rem;
-}
-
-/* Botón de descargar lista */
-button.descargar {
-  background-color: #28a745; /* Verde */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-button.descargar:hover {
-  background-color: #218838; /* Verde oscuro al pasar el ratón */
 }

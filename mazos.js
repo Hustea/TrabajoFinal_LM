@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     descargarBtn.className = 'descargar-btn';
     descargarBtn.addEventListener('click', () => descargarLista(mazo));
     cartasGrid.appendChild(descargarBtn);
-
+    
     // Mostrar las cartas del mazo
     mazo.cartas.forEach((carta) => {
       const cartaDiv = document.createElement('div');
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     enlace.download = `${mazo.nombre}.txt`;
     enlace.click();
   }
-
+  
   // Función para parsear el archivo de texto Squirreled Away.txt
   function parseMazos(data) {
     const lines = data.split('\n');

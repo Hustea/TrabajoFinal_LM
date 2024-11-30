@@ -365,3 +365,730 @@ Family Matters
 1 Thriving Heath (BLC) 348
 1 Thriving Isle (BLC) 349
 1 Time Wipe (BLC) 262
+
+Endless Punishment
+1 Valgavoth, Harrower of Souls (DSC) 6 *F*
+1 Arcane Signet (DSC) 92
+1 Ash Barrens (DSC) 260
+1 Barbflare Gremlin (DSC) 26
+1 Basilisk Collar (DSC) 241
+1 Bastion of Remembrance (DSC) 131
+1 Bedevil (DSC) 84
+1 Blackcleave Cliffs (DSC) 263
+1 Blasphemous Act (DSC) 160
+1 Blood Artist (DSC) 132
+1 Blood Pact (DSC) 76
+1 Blood Seeker (DSC) 77
+1 Bloodfell Caves (DSC) 264
+1 Braids, Arisen Nightmare (DSC) 133
+1 Brash Taunter (DSC) 161
+1 Canyon Slough (DSC) 266
+1 Chaos Warp (DSC) 162
+1 Combustible Gearhulk (DSC) 163
+1 Command Tower (DSC) 96
+1 Decree of Pain (DSC) 136
+1 Dragonskull Summit (DSC) 271
+1 Enchanter's Bane (DSC) 164
+1 Evolving Wilds (DSC) 274
+1 Exotic Orchard (DSC) 275
+1 Falkenrath Noble (DSC) 140
+1 Fate Unraveler (DSC) 141
+1 Fear of Burning Alive (DSK) 135
+1 Feed the Swarm (DSC) 78
+1 Fellwar Stone (DSC) 245
+1 Florian, Voldaren Scion (DSC) 217
+1 Foreboding Ruins (DSC) 277
+1 Geothermal Bog (DSC) 278
+1 Gleeful Arsonist (DSC) 27
+1 Grab the Prize (DSK) 138
+1 Graven Cairns (DSC) 280
+1 Gray Merchant of Asphodel (DSC) 142
+1 Harsh Mentor (DSC) 165
+1 Infernal Grasp (DSC) 143
+1 Kaervek the Merciless (DSC) 222
+1 Kardur, Doomscourge (DSC) 223
+1 Kederekt Parasite (DSC) 144
+1 Leechridden Swamp (DSC) 286
+1 Light Up the Stage (DSC) 166
+1 Lightning Greaves (DSC) 93
+1 Mask of Griselbrand (DSC) 145
+1 Massacre Girl (DSC) 146
+1 Massacre Wurm (DSC) 147
+1 Mayhem Devil (DSC) 225
+1 Mind Stone (DSC) 248
+1 Mogis, God of Slaughter (DSC) 89
+1 Morbid Opportunist (DSC) 148
+4 Mountain (DSK) 283
+4 Mountain (DSK) 284
+1 Nightshade Harvester (DSC) 150
+1 Persistent Constrictor (DSC) 22
+1 Rakdos Charm (DSC) 229
+1 Rakdos Signet (DSC) 250
+1 Rakdos, Lord of Riots (DSC) 230
+1 Rampaging Ferocidon (DSC) 167
+1 Sadistic Shell Game (DSC) 24
+1 Séance Board (DSC) 40
+1 Shadowblood Ridge (DSC) 296
+1 Shivan Gorge (DSC) 297
+1 Sign in Blood (DSC) 156
+1 Smoldering Marsh (DSC) 299
+1 Sol Ring (DSC) 94
+1 Solemn Simulacrum (DSC) 253
+1 Spiked Corridor // Torture Pit (DSC) 28
+1 Spinerock Knoll (DSC) 300
+1 Spiteful Visions (DSC) 233
+1 Star Athlete (DSC) 29
+1 Stormfist Crusader (DSC) 234
+1 Sulfurous Springs (DSC) 301
+1 Suspended Sentence (DSC) 25
+4 Swamp (DSK) 281
+4 Swamp (DSK) 282
+1 Syr Konrad, the Grim (DSC) 158
+1 Tainted Peak (DSC) 304
+1 Talisman of Indulgence (DSC) 254
+1 Tectonic Giant (DSC) 168
+1 Temple of Malice (DSC) 310
+1 Temple of the False God (DSC) 313
+1 Terramorphic Expanse (DSK) 269
+1 The Lord of Pain (DSC) 3 *F*
+1 Theater of Horrors (DSC) 236
+1 Thought Vessel (DSC) 256
+1 Vial Smasher the Fierce (DSC) 239
+1 Witch's Clinic (DSC) 325
+
+Death Toll
+1 Winter, Cynical Opportunist (DSC) 7 *F*
+1 Arachnogenesis (DSC) 169
+1 Arcane Signet (DSC) 92
+1 Ash Barrens (DSC) 260
+1 Barren Moor (DSC) 262
+1 Binding the Old Gods (DSC) 213
+1 Bojuka Bog (DSC) 265
+1 Burnished Hart (DSC) 243
+1 Carrion Grub (DSC) 134
+1 Cemetery Tampering (DSC) 135
+1 Command Tower (DSC) 96
+1 Commander's Sphere (DSC) 244
+1 Convert to Slime (DSC) 37
+1 Crawling Sensation (DSC) 173
+1 Culling Ritual (DSC) 85
+1 Darkmoss Bridge (DSC) 269
+1 Deadbridge Chant (DSC) 215
+1 Deathcap Cultivator (DSC) 175
+1 Deathreap Ritual (DSC) 86
+1 Deluge of Doom (DSC) 18
+1 Demolisher Spawn (DSC) 31
+1 Demonic Covenant (DSC) 19
+1 Dryad Arbor (DSC) 273
+1 Evolving Wilds (DSC) 274
+1 Exotic Orchard (DSC) 275
+4 Forest (DSK) 285
+3 Forest (DSK) 286
+1 Formless Genesis (DSC) 34
+1 Giant Adephage (DSC) 179
+1 Gnarlwood Dryad (DSC) 180
+1 Golgari Rot Farm (DSC) 279
+1 Golgari Signet (DSC) 246
+1 Grapple with the Past (DSC) 82
+1 Grim Backwoods (DSC) 281
+1 Grim Flayer (DSC) 218
+1 Grisly Salvage (DSC) 219
+1 Grist, the Hunger Tide (DSC) 220
+1 Harmonize (DSC) 182
+1 Harrow (DSC) 183
+1 Haywire Mite (DSC) 247
+1 Hornet Queen (DSC) 184
+1 Inscription of Abundance (DSC) 186
+1 Into the Pit (DSC) 20
+1 Ishkanah, Grafwidow (DSC) 187
+1 Jungle Hollow (DSC) 285
+1 Llanowar Wastes (DSC) 287
+1 Mind Stone (DSC) 248
+1 Moldgraf Millipede (DSC) 188
+1 Moldgraf Monstrosity (DSC) 83
+1 Mulch (DSC) 189
+1 Necroblossom Snarl (DSC) 290
+1 Night's Whisper (DSC) 79
+1 Noxious Gearhulk (DSC) 151
+1 Nyx Weaver (DSC) 226
+1 Ob Nixilis Reignited (DSC) 152
+1 Obsessive Skinner (DSC) 191
+1 Old Stickfingers (DSC) 227
+1 Polluted Cistern // Dim Oubliette (DSC) 23
+1 Professor Onyx (DSC) 153
+1 Putrefy (DSC) 90
+1 Rampant Growth (DSC) 193
+1 Reanimate (DSC) 155
+1 Reliquary Tower (DSC) 295
+1 Rendmaw, Creaking Nest (DSC) 5 *F*
+1 Sakura-Tribe Elder (DSC) 194
+1 Scavenging Ooze (DSC) 196
+1 Skola Grovedancer (DSC) 199
+1 Sol Ring (DSC) 94
+1 Solemn Simulacrum (DSC) 253
+1 Stitcher's Supplier (DSC) 157
+1 Suspicious Bookcase (DSC) 95
+3 Swamp (DSK) 282
+4 Swamp (DSK) 281
+1 Tainted Wood (DSC) 305
+1 Talisman of Resilience (DSC) 255
+1 Temple of Malady (DSC) 309
+1 Temple of the False God (DSC) 313
+1 Terramorphic Expanse (DSK) 269
+1 Titania, Nature's Force (DSC) 202
+1 Tranquil Thicket (DSC) 318
+1 Tree of Tales (DSC) 319
+1 Twilight Mire (DSC) 320
+1 Ursine Monstrosity (DSC) 36
+1 Vault of Whispers (DSC) 322
+1 Vile Mutilator (DSK) 122
+1 Viridescent Bog (DSC) 324
+1 Whip of Erebos (DSC) 159
+1 Whispersilk Cloak (DSC) 257
+1 Woodland Cemetery (DSC) 326
+1 Wrenn and Seven (DSC) 207
+
+Jump Scare!
+1 Zimone, Mystery Unraveler (DSC) 8 *F*
+1 Aesi, Tyrant of Gyre Strait (DSC) 210
+1 Aether Gale (DSC) 109
+1 Arcane Signet (DSC) 92
+1 Arixmethes, Slumbering Isle (DSC) 211
+1 Ash Barrens (DSC) 260
+1 Ashaya, Soul of the Wild (DSC) 170
+1 Augur of Autumn (DSC) 171
+1 Beanstalk Giant // Fertile Footsteps (DSC) 172
+1 Beast Within (DSC) 80
+1 Biomass Mutation (DSC) 214
+1 Body of Knowledge (DSC) 112
+1 Cackling Counterpart (DSC) 72
+1 Castle Vantress (DSC) 267
+1 Citanul Hierophants (DSC) 81
+1 Command Tower (DSC) 96
+1 Counterspell (DSC) 114
+1 Cultivate (DSC) 174
+1 Curator Beastie (DSC) 30
+1 Deathmist Raptor (DSC) 176
+1 Dig Through Time (DSC) 115
+1 Disorienting Choice (DSC) 32
+1 Drownyard Temple (DSC) 272
+1 Eureka Moment (DSC) 216
+1 Evolving Wilds (DSC) 274
+1 Experimental Lab // Staff Room (DSC) 33
+1 Explosive Vegetation (DSC) 177
+1 Ezuri's Predation (DSC) 178
+1 Flooded Grove (DSC) 276
+5 Forest (DSK) 285
+4 Forest (DSK) 286
+1 Giggling Skitterspike (DSC) 39
+1 Glitch Interpreter (DSC) 13
+1 Greater Tanuki (DSC) 181
+1 Growing Dread (DSK) 216
+1 Growth Spiral (DSC) 88
+1 Hinterland Harbor (DSC) 284
+1 Hydra Omnivore (DSC) 185
+5 Island (DSK) 279
+4 Island (DSK) 280
+1 Kefnet the Mindful (DSC) 118
+1 Kheru Spellsnatcher (DSC) 119
+1 Kianne, Corrupted Memory (DSC) 2 *F*
+1 Mosswort Bridge (DSC) 288
+1 Multani, Yavimaya's Avatar (DSC) 190
+1 Myriad Landscape (DSC) 289
+1 Overflowing Basin (DSC) 293
+1 Overgrown Zealot (DSK) 193
+1 Oversimplify (DSC) 228
+1 Overwhelming Stampede (DSC) 192
+1 Primordial Mist (DSC) 123
+1 Quandrix Campus (DSC) 294
+1 Rampant Growth (DSC) 193
+1 Rashmi, Eternities Crafter (DSC) 231
+1 Reality Shift (DSC) 125
+1 Reliquary Tower (DSC) 295
+1 Retreat to Coralhelm (DSC) 126
+1 Sakura-Tribe Elder (DSC) 194
+1 Sandwurm Convergence (DSC) 195
+1 Scroll of Fate (DSC) 251
+1 Scute Swarm (DSC) 197
+1 Shigeki, Jukai Visionary (DSC) 198
+1 Shriekwood Devourer (DSC) 35
+1 Simic Growth Chamber (DSC) 298
+1 Simic Signet (DSC) 252
+1 Skaab Ruinator (DSC) 128
+1 Sol Ring (DSC) 94
+1 Tangled Islet (DSC) 306
+1 Tatyova, Benthic Druid (DSC) 235
+1 Temple of Mystery (DSC) 311
+1 Temple of the False God (DSC) 313
+1 Temur War Shaman (DSC) 200
+1 Terramorphic Expanse (DSK) 269
+1 They Came from the Pipes (DSC) 14
+1 Thornwood Falls (DSC) 314
+1 Thunderfoot Baloth (DSC) 201
+1 Trail of Mystery (DSC) 203
+1 Trygon Predator (DSC) 238
+1 Vineglimmer Snarl (DSC) 323
+1 Whisperwood Elemental (DSC) 204
+1 Wilderness Reclamation (DSC) 205
+1 Worldspine Wurm (DSC) 206
+1 Yavimaya Coast (DSC) 327
+1 Yavimaya Elder (DSC) 208
+1 Yedora, Grave Gardener (DSC) 209
+1 Zimone's Hypothesis (DSC) 15
+
+Miracle Worker
+1 Aminatou, Veil Piercer (DSC) 1 *F*
+1 Adarkar Wastes (DSC) 258
+1 Aminatou's Augury (DSC) 71
+1 Ancient Cellarspawn (DSC) 16
+1 Arcane Denial (DSC) 110
+1 Arcane Sanctum (DSC) 259
+1 Arcane Signet (DSC) 92
+1 Archetype of Imagination (DSC) 111
+1 Arvinox, the Mind Flail (DSC) 130
+1 Ash Barrens (DSC) 260
+1 Athreos, Shroud-Veiled (DSC) 212
+1 Auramancer (DSC) 97
+1 Azorius Chancery (DSC) 261
+1 Azorius Signet (DSC) 240
+1 Bojuka Bog (DSC) 265
+1 Bottomless Pool // Locker Room (DSK) 43
+1 Brainstone (DSC) 242
+1 Brainstorm (DSC) 113
+1 Burnished Hart (DSC) 243
+1 Cast Out (DSC) 98
+1 Caves of Koilos (DSC) 268
+1 Command Tower (DSC) 96
+1 Commander's Sphere (DSC) 244
+1 Cramped Vents // Access Maze (DSC) 17
+1 Demon of Fate's Design (DSC) 137
+1 Diabolic Vision (DSC) 87
+1 Dimir Aqueduct (DSC) 270
+1 Doomwake Giant (DSC) 138
+1 Dream Eater (DSC) 116
+1 Entreat the Angels (DSC) 99
+1 Evolving Wilds (DSC) 274
+1 Extravagant Replication (DSC) 117
+1 Fear of Sleep Paralysis (DSC) 12
+1 Halimar Depths (DSC) 282
+1 Hall of Heliod's Generosity (DSC) 283
+1 Inkshield (DSC) 221
+2 Island (DSK) 280
+2 Island (DSK) 279
+1 Life Insurance (DSC) 224
+1 Mesa Enchantress (DSC) 68
+1 Metamorphosis Fanatic (DSC) 21
+1 Mind Stone (DSC) 248
+1 Mirrormade (DSC) 120
+1 Monologue Tax (DSC) 100
+1 Moon-Blessed Cleric (DSC) 69
+1 Nightmare Shepherd (DSC) 149
+1 Obscura Storefront (DSC) 291
+1 Ondu Spiritdancer (DSC) 101
+1 One with the Multiverse (DSC) 121
+1 Orzhov Basilica (DSC) 292
+1 Orzhov Signet (DSC) 249
+1 Otherworldly Gaze (DSC) 122
+1 Phenomenon Investigators (DSC) 38
+3 Plains (DSK) 277
+2 Plains (DSK) 278
+1 Ponder (DSC) 73
+1 Portent (DSC) 74
+1 Prognostic Sphinx (DSC) 124
+1 Read the Bones (DSC) 154
+1 Redress Fate (DSC) 9
+1 Return to Dust (DSC) 102
+1 Secret Arcade // Dusty Parlor (DSC) 10
+1 Shark Typhoon (DSC) 127
+1 Sigil of the Empty Throne (DSC) 103
+1 Soaring Lightbringer (DSC) 11
+1 Sol Ring (DSC) 94
+1 Solemn Simulacrum (DSC) 253
+1 Sphere of Safety (DSC) 104
+1 Spirit-Sister's Call (DSC) 232
+1 Starfield Mystic (DSC) 105
+3 Swamp (DSK) 281
+2 Swamp (DSK) 282
+1 Swords to Plowshares (DSC) 106
+1 Tainted Field (DSC) 302
+1 Tainted Isle (DSC) 303
+1 Telling Time (DSC) 75
+1 Temple of Deceit (DSC) 307
+1 Temple of Enlightenment (DSC) 308
+1 Temple of Silence (DSC) 312
+1 Terminus (DSC) 70
+1 Terramorphic Expanse (DSK) 269
+1 The Eldest Reborn (DSC) 139
+1 The Master of Keys (DSC) 4 *F*
+1 Thirst for Meaning (DSC) 129
+1 Thriving Heath (DSC) 315
+1 Thriving Isle (DSC) 316
+1 Thriving Moor (DSC) 317
+1 Time Wipe (DSC) 237
+1 Timely Ward (DSC) 107
+1 Underground River (DSC) 321
+1 Utter End (DSC) 91
+1 Verge Rangers (DSC) 108
+
+Most Wanted
+1 Olivia, Opulent Outlaw (OTC) 2 *F*
+1 Academy Manufactor (OTC) 251
+1 Aetherborn Marauder (OTC) 125
+1 Angelic Sell-Sword (OTC) 10
+1 Angrath's Marauders (OTC) 153
+1 Arcane Signet (OTC) 252
+1 Back in Town (OTC) 18
+1 Bandit's Haul (OTJ) 240
+1 Battlefield Forge (OTC) 271
+1 Blackcleave Cliffs (OTC) 272
+1 Bojuka Bog (OTC) 273
+1 Bonders' Enclave (OTC) 274
+1 Boros Charm (OTC) 216
+1 Bounty Board (OTC) 37
+1 Breena, the Demagogue (OTC) 217
+1 Canyon Slough (OTC) 275
+1 Captain Lannery Storm (OTC) 158
+1 Captivating Crew (OTC) 159
+1 Caves of Koilos (OTC) 277
+1 Changeling Outcast (OTC) 128
+1 Charred Graverobber (OTC) 19
+1 Clifftop Retreat (OTC) 278
+1 Command Beacon (OTC) 279
+1 Command Tower (OTC) 280
+1 Council's Judgment (OTC) 79
+1 Curtains' Call (OTC) 130
+1 Dead Before Sunrise (OTC) 26
+1 Deadly Dispute (OTC) 131
+1 Demolition Field (OTC) 283
+1 Desolate Mire (OTC) 287
+1 Dire Fleet Daredevil (OTC) 162
+1 Dire Fleet Ravager (OTC) 132
+1 Discreet Retreat (OTC) 20
+1 Dragonskull Summit (OTC) 289
+1 Exotic Orchard (OTC) 293
+1 Fain, the Broker (OTC) 133
+1 Feed the Swarm (OTC) 134
+1 Fetid Heath (OTC) 295
+1 Glittering Stockpile (OTC) 167
+1 Graywater's Fixer (OTC) 36
+1 Grenzo, Havoc Raiser (OTC) 168
+1 Heliod's Intervention (OTC) 81
+1 Hex (OTC) 136
+1 Humble Defector (OTC) 170
+1 Idol of Oblivion (OTC) 258
+1 Impulsive Pilferer (OTC) 171
+1 Isolated Chapel (OTC) 301
+1 Kamber, the Plunderer (OTC) 137
+1 Laurine, the Diversion (OTC) 172
+1 Life Insurance (OTC) 233
+1 Lightning Greaves (OTC) 260
+1 Mari, the Killing Quill (OTC) 138
+1 Marshland Bloodcaster (OTC) 139
+1 Mass Mutiny (OTC) 174
+1 Massacre Girl (OTC) 140
+1 Mirror Entity (OTC) 83
+1 Misfortune Teller (OTC) 141
+1 Mistmeadow Skulk (OTC) 84
+1 Morbid Opportunist (OTC) 142
+1 Mountain (OTJ) 283
+1 Mountain (OTJ) 284
+1 Nighthawk Scavenger (OTC) 144
+1 Nomad Outpost (OTC) 306
+1 Ogre Slumlord (OTC) 145
+1 Orzhov Signet (OTC) 261
+1 Painful Truths (OTC) 146
+1 Path of Ancestry (OTC) 310
+1 Plains (OTJ) 277
+1 Plains (OTJ) 278
+1 Queen Marchesa (OTC) 239
+1 Rain of Riches (OTC) 177
+1 Rakdos Signet (OTC) 265
+1 Rankle, Master of Pranks (OTC) 148
+1 Requisition Raid (OTJ) 26
+1 Rogue's Passage (OTC) 313
+1 Rugged Prairie (OTC) 314
+1 Seize the Spotlight (OTC) 179
+1 Shadowblood Ridge (OTC) 317
+1 Shiny Impetus (OTC) 180
+1 Shoot the Sheriff (OTJ) 106
+1 Smoldering Marsh (OTC) 321
+1 Sol Ring (OTC) 267
+1 Sulfurous Springs (OTC) 323
+1 Sunhome, Fortress of the Legion (OTC) 324
+2 Swamp (OTJ) 281
+2 Swamp (OTJ) 282
+1 Tainted Peak (OTC) 327
+1 Temple of Malice (OTC) 331
+1 Temple of Silence (OTC) 333
+1 Temple of the False God (OTC) 334
+1 Temple of Triumph (OTC) 335
+1 Tenured Inkcaster (OTC) 149
+1 Trailblazer's Boots (OTC) 269
+1 Vault of the Archangel (OTC) 339
+1 Veinwitch Coven (OTC) 151
+1 Vihaan, Goldwaker (OTC) 8 *F*
+1 We Ride at Dawn (OTC) 12
+1 Witch of the Moors (OTC) 152
+
+Grand Larceny
+1 Gonti, Canny Acquisitor (OTC) 1 *F*
+1 Access Tunnel (OTC) 270
+1 Arcane Heist (OTC) 13
+1 Arcane Signet (OTC) 252
+1 Baleful Mastery (OTC) 126
+1 Baleful Strix (OTC) 215
+1 Bladegriff Prototype (OTC) 253
+1 Brainstealer Dragon (OTC) 127
+1 Cazur, Ruthless Stalker (OTC) 188
+1 Chaos Wand (OTC) 254
+1 Cold-Eyed Selkie (OTC) 218
+1 Command Tower (OTC) 280
+1 Culling Ritual (OTC) 219
+1 Cunning Rhetoric (OTC) 129
+1 Curse of the Swine (OTC) 92
+1 Darkslick Shores (OTC) 281
+1 Darksteel Ingot (OTC) 256
+1 Darkwater Catacombs (OTC) 282
+1 Dazzling Sphinx (OTC) 93
+1 Diluvian Primordial (OTC) 96
+1 Dimir Aqueduct (OTC) 288
+1 Doc Aurlock, Grizzled Genius (OTJ) 201
+1 Dream-Thief's Bandana (OTC) 38
+1 Drowned Catacomb (OTC) 290
+1 Edric, Spymaster of Trest (OTC) 221
+1 Exotic Orchard (OTC) 293
+1 Extract Brain (OTC) 225
+1 Fallen Shinobi (OTC) 226
+1 Feed the Swarm (OTC) 134
+1 Felix Five-Boots (OTC) 6 *F*
+1 Fellwar Stone (OTC) 257
+1 Fetid Pools (OTC) 296
+1 Flooded Grove (OTC) 297
+2 Forest (OTJ) 285
+2 Forest (OTJ) 286
+1 Ghostly Pilferer (OTC) 98
+1 Gonti, Lord of Luxury (OTC) 135
+1 Heartless Conscription (OTC) 21
+1 Hinterland Harbor (OTC) 300
+1 Hostage Taker (OTC) 231
+3 Island (OTJ) 279
+2 Island (OTJ) 280
+1 Kodama's Reach (OTC) 196
+1 Llanowar Wastes (OTC) 305
+1 Mind's Dilation (OTC) 101
+1 Nashi, Moon Sage's Scion (OTC) 143
+1 Oblivion Sower (OTC) 77
+1 Ohran Frostfang (OTC) 199
+1 Opulent Palace (OTC) 307
+1 Orochi Soul-Reaver (OTC) 22
+1 Overflowing Basin (OTC) 308
+1 Plasm Capture (OTC) 237
+1 Predators' Hour (OTC) 147
+1 Prismatic Lens (OTC) 264
+1 Putrefy (OTC) 238
+1 Rampant Growth (OTC) 201
+1 Reliquary Tower (OTC) 312
+1 Sage of the Beyond (OTC) 111
+1 Savvy Trader (OTC) 33
+1 Shadowmage Infiltrator (OTC) 240
+1 Silent-Blade Oni (OTC) 241
+1 Silhana Ledgewalker (OTC) 206
+1 Siphon Insight (OTC) 242
+1 Slither Blade (OTC) 114
+1 Smirking Spelljacker (OTC) 16
+1 Sol Ring (OTC) 267
+1 Stolen Goods (OTC) 115
+1 Sunken Hollow (OTC) 325
+3 Swamp (OTJ) 281
+3 Swamp (OTJ) 282
+1 Temple of Deceit (OTC) 328
+1 Temple of Malady (OTC) 330
+1 Temple of Mystery (OTC) 332
+1 The Mimeoplasm (OTC) 234
+1 Thief of Sanity (OTC) 243
+1 Thieving Amalgam (OTC) 150
+1 Thieving Skydiver (OTC) 118
+1 Thieving Varmint (OTC) 23
+1 Three Visits (OTC) 209
+1 Tower Winder (OTC) 34
+1 Triton Shorestalker (OTC) 121
+1 Trygon Predator (OTC) 246
+1 Twilight Mire (OTC) 337
+1 Ukkima, Stalking Shadow (OTC) 247
+1 Underground River (OTC) 338
+1 Villainous Wealth (OTC) 249
+1 Viridescent Bog (OTC) 340
+1 Void Attendant (OTC) 212
+1 Whirler Rogue (OTC) 122
+1 Woodland Cemetery (OTC) 341
+1 Yavimaya Coast (OTC) 342
+
+Desert Bloom
+1 Yuma, Proud Protector (OTC) 4 *F*
+1 Abraded Bluffs (OTJ) 251
+1 Ancient Greenwarden (OTC) 186
+1 Angel of Indemnity (OTC) 9
+1 Angel of the Ruins (OTC) 78
+1 Arcane Signet (OTC) 252
+1 Avenger of Zendikar (OTC) 187
+1 Bitter Reunion (OTC) 156
+1 Bovine Intervention (OTJ) 6
+1 Bristling Backwoods (OTJ) 253
+1 Cactus Preserve (OTC) 40
+1 Cataclysmic Prospecting (OTC) 24
+1 Chromatic Lantern (OTC) 255
+1 Command Tower (OTC) 280
+1 Conduit Pylons (OTJ) 254
+1 Crawling Sensation (OTC) 189
+1 Creosote Heath (OTJ) 255
+1 Decimate (OTC) 220
+1 Descend upon the Sinful (OTC) 80
+1 Desert of the Fervent (OTC) 284
+1 Desert of the Indomitable (OTC) 285
+1 Desert of the True (OTC) 286
+1 Dune Chanter (OTC) 31
+1 Dunes of the Dead (OTC) 291
+1 Eccentric Farmer (OTC) 190
+1 Electric Revelation (OTC) 163
+1 Elvish Rejuvenator (OTC) 191
+1 Embrace the Unknown (OTC) 28
+1 Escape to the Wilds (OTC) 223
+1 Evolving Wilds (OTC) 292
+1 Explore (OTC) 192
+4 Forest (OTJ) 285
+3 Forest (OTJ) 286
+1 Genesis Hydra (OTC) 193
+1 Harrow (OTC) 194
+1 Hashep Oasis (OTC) 299
+1 Hazezon, Shaper of Sand (OTC) 229
+1 Heaven // Earth (OTC) 230
+1 Hour of Promise (OTC) 195
+1 Jungle Shrine (OTC) 303
+1 Kirri, Talented Sprout (OTC) 7 *F*
+1 Krosan Verge (OTC) 304
+1 Magmatic Insight (OTC) 173
+1 Map the Frontier (OTJ) 170
+1 Marshal's Anthem (OTC) 82
+1 Mirage Mesa (OTJ) 262
+2 Mountain (OTJ) 283
+2 Mountain (OTJ) 284
+1 Nantuko Cultivator (OTC) 198
+1 Nesting Dragon (OTC) 176
+1 Omnath, Locus of Rage (OTC) 236
+1 Oracle of Mul Daya (OTC) 200
+1 Painted Bluffs (OTC) 309
+1 Path to Exile (OTC) 85
+1 Perennial Behemoth (OTC) 262
+1 Perpetual Timepiece (OTC) 263
+3 Plains (OTJ) 277
+3 Plains (OTJ) 278
+1 Ramunap Excavator (OTC) 202
+1 Ramunap Ruins (OTC) 311
+1 Requisition Raid (OTJ) 26
+1 Return of the Wildspeaker (OTC) 203
+1 Rumbleweed (OTC) 32
+1 Sand Scout (OTC) 11
+1 Satyr Wayfinder (OTC) 204
+1 Scaretiller (OTC) 266
+1 Scattered Groves (OTC) 315
+1 Scavenger Grounds (OTC) 316
+1 Scute Swarm (OTC) 205
+1 Sevinne's Reclamation (OTC) 86
+1 Shefet Dunes (OTC) 318
+1 Sheltered Thicket (OTC) 319
+1 Skullwinder (OTC) 207
+1 Sol Ring (OTC) 267
+1 Springbloom Druid (OTC) 208
+1 Sun Titan (OTC) 87
+1 Sunscorched Divide (OTC) 326
+1 Swiftfoot Boots (OTC) 268
+1 Terramorphic Expanse (OTC) 336
+1 The Mending of Dominaria (OTC) 197
+1 Thrilling Discovery (OTC) 245
+1 Titania, Protector of Argoth (OTC) 210
+1 Turntimber Sower (OTC) 211
+1 Unholy Heat (OTC) 182
+1 Valorous Stance (OTC) 88
+1 Vengeful Regrowth (OTC) 35
+1 Winding Way (OTC) 213
+1 World Shaper (OTC) 214
+1 Wreck and Rebuild (OTC) 250
+
+Quick Draw
+1 Stella Lee, Wild Card (OTC) 3 *F*
+1 Arcane Bombardment (OTC) 154
+1 Arcane Denial (OTC) 89
+1 Arcane Signet (OTC) 252
+1 Archmage Emeritus (OTC) 90
+1 Baral's Expertise (OTC) 91
+1 Big Score (OTC) 155
+1 Bloodthirsty Adversary (OTC) 157
+1 Cascade Bluffs (OTC) 276
+1 Chaos Warp (OTC) 160
+1 Command Tower (OTC) 280
+1 Crackling Spellslinger (OTC) 25
+1 Curse of the Swine (OTC) 92
+1 Cursed Mirror (OTC) 161
+1 Deep Analysis (OTC) 94
+1 Dig Through Time (OTC) 95
+1 Electrostatic Field (OTC) 164
+1 Elemental Eruption (OTC) 27
+1 Epic Experiment (OTC) 222
+1 Eris, Roar of the Storm (OTC) 5 *F*
+1 Exotic Orchard (OTC) 293
+1 Expressive Iteration (OTC) 224
+1 Faithless Looting (OTC) 165
+1 Ferrous Lake (OTC) 294
+1 Finale of Promise (OTC) 166
+1 Finale of Revelation (OTC) 97
+1 Forger's Foundry (OTC) 14
+1 Frostboil Snarl (OTC) 298
+1 Galvanic Iteration (OTC) 227
+1 Goblin Electromancer (OTC) 228
+1 Guttersnipe (OTC) 169
+1 Haughty Djinn (OTC) 99
+7 Island (OTJ) 279
+7 Island (OTJ) 280
+1 Izzet Boilerworks (OTC) 302
+1 Izzet Signet (OTC) 259
+1 Kaza, Roil Chaser (OTC) 232
+1 Leyline Dowser (OTC) 39
+1 Lock and Load (OTC) 15
+1 Midnight Clock (OTC) 100
+1 Mizzix's Mastery (OTC) 175
+7 Mountain (OTJ) 283
+6 Mountain (OTJ) 284
+1 Murmuring Mystic (OTC) 102
+1 Niv-Mizzet, Parun (OTC) 235
+1 Octavia, Living Thesis (OTC) 103
+1 Opt (OTC) 104
+1 Ponder (OTC) 105
+1 Pongify (OTC) 106
+1 Preordain (OTC) 107
+1 Propaganda (OTC) 108
+1 Pteramander (OTC) 109
+1 Pyretic Charge (OTC) 29
+1 Radical Idea (OTC) 110
+1 Reliquary Tower (OTC) 312
+1 Rousing Refrain (OTC) 178
+1 Serum Visions (OTC) 112
+1 Shark Typhoon (OTC) 113
+1 Shivan Reef (OTC) 320
+1 Smoldering Stagecoach (OTC) 30
+1 Sol Ring (OTC) 267
+1 Storm-Kiln Artist (OTC) 181
+1 Sulfur Falls (OTC) 322
+1 Talrand, Sky Summoner (OTC) 116
+1 Temple of Epiphany (OTC) 329
+1 Temple of the False God (OTC) 334
+1 Tezzeret's Gambit (OTC) 117
+1 Think Twice (OTC) 119
+1 Third Path Iconoclast (OTC) 244
+1 Thunderclap Drake (OTC) 17
+1 Treasure Cruise (OTC) 120
+1 Vandalblast (OTC) 183
+1 Veyran, Voice of Duality (OTC) 248
+1 Volcanic Torrent (OTC) 184
+1 Windfall (OTC) 123
+1 Winged Boots (OTC) 124
+1 Young Pyromancer (OTC) 185

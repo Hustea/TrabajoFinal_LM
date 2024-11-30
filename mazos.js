@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let mazos = []; // Aquí se cargarán los mazos desde el archivo Squirreled Away.txt
 
   // Cargar los mazos desde el archivo predefinido
-  fetch('./Squirreled Away.txt')
+  fetch('./Commander_Precons.txt')
     .then((response) => response.text())
     .then((data) => {
       mazos = parseMazos(data);

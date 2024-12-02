@@ -12,4 +12,6 @@ Buscador de mazos:
 Esta parta es algo diferente debido a que no existe ninguna api que tenga informacion sobre mazos preconstruidos, por lo tanto al buscar un mazo el codigo
 JavaScript buscara en un archivo de texto que hay en el repositoorio llamado "Comander_Precons" donde estaran los nombres de los mazos seguidos de el
 contenido de estos y utilizara el nombre de las cartas que encuentre ahi para hacer peticiones a la api anteriormente mencionada.
+Por ultimo, el buscador de mazos ademas de mostrarte las cartas de estos tambien viene con un boton de descarga que al pulsarlo descargara un archivode texto
+el cual contendra una lista del contenido del mazo utilizando el formato oficial que se utiliza en las paginas del hobby.
 (Los datos de el archivo "Comander_Precons" los he recopilado haciento web scraping con Python)

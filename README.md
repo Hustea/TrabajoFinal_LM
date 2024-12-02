@@ -1,4 +1,5 @@
 Autor: Adrian Nicolas Hustea Spilca
+
 Esta pagina web movil es un trabajo para la asignatura de "Lenguaje de Marcas" en primer año de Desarollo de Aplicaciones Multiplataformas.
 Esta pagina web cumple el proposito de recopilar datos sobre cartas del juego "Magic The Gathering" utilizando una interfaz simple, colorida e intuitiva 
 proporciono a los usuarios dos funciones claramente separadas en el menu principal que son las de buscar cartas sueltas y buscar mazos preconstruidos.
